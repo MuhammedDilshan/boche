@@ -1,0 +1,32 @@
+@media (max-width: 480px) {
+    .bottom-nav {
+        height: 80px;
+        background: #346F32;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .nav-bar li {
+        color: #fff;
+        text-align: center;
+    }
+
+    .link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav-bar li img {
+        display: block;
+        width: 30px;
+        margin: 0 auto;
+    }
+}

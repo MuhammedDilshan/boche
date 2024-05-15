@@ -1,0 +1,67 @@
+.my-order {
+    padding: 20px;
+}
+
+.my-order form {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    background-color: #F4F4F4;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.my-order form svg {
+    font-size: 20px;
+}
+
+.my-order form input {
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    background-color: #F4F4F4;
+    width: 100%;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: #474747;
+}
+
+.order-list .order-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+.order-list .order-item .order-box {
+    display: flex;
+    align-items: center;
+}
+
+.order-list .order-item .order-box .tea {
+    width: 50px;
+    margin-right: 16px;
+}
+
+.order-list .order-item .order-box .tea img {
+    display: block;
+    width: 100%;
+}
+
+.order-list .order-item .order-box .dliver p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #434343;
+}
+
+.order-list .order-item .order-box .dliver span {
+    font-size: 10px;
+    font-weight: 500;
+    color: #434343;
+}

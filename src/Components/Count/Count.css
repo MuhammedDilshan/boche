@@ -1,0 +1,62 @@
+@media (max-width: 480px) {
+
+    .count {
+        padding: 0 50px 50px 50px;
+    }
+
+    .tea-number {
+        text-align: center;
+        margin-top: -70px;
+        position: relative;
+    }
+
+    .tea-number img.tea {
+        width: 150px;
+    }
+
+    .tea-number h2 {
+        font-size: 45px;
+        font-weight: 800;
+        color: #346F32;
+    }
+
+    .tea-number h6 {
+        font-size: 12px;
+        color: #808080;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .couter {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .couter div {
+        background-color: #FFFFFF;
+        border-radius: 62px;
+        padding: 20px 44px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        cursor: pointer;
+    }
+
+    .couter div svg {
+        font-size: 18px;
+        color: #346F32;
+    }
+
+    .couter p {
+        font-size: 18px;
+        color: #346F32;
+    }
+
+    .round {
+        position: absolute;
+        left: 60px;
+        top: 0;
+        width: 240px;
+        z-index: -1;
+    }
+}

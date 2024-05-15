@@ -1,0 +1,78 @@
+.withdrawdetails {
+    padding: 40px;
+}
+
+.withdrawdetails .balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.withdrawdetails .balance .text {
+    display: flex;
+    align-items: center;
+}
+
+.withdrawdetails .balance h6 {
+    font-weight: 700;
+    font-size: 14px;
+    color: #2B2129;
+    margin-left: 6px;
+}
+
+.withdrawdetails form {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+.withdrawdetails input {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    color: #DADADA;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.withdrawdetails input.enter::placeholder {
+    color: #DADADA;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.withdrawdetails p {
+    font-size: 14px;
+    color: #2B2129;
+    font-weight: 500;
+    text-align: center;
+}
+
+.withdrawdetails .amounts {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.withdrawdetails .amounts li {
+    border-radius: 16px;
+    border: 0.3px solid #2B2129;
+    width: 100px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.withdrawdetails .amounts li p {
+    font-size: 21px;
+    font-weight: 700;
+    color: #2B2129;
+}

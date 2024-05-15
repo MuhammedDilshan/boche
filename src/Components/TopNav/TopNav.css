@@ -1,0 +1,26 @@
+@media (max-width: 480px) {
+    .topnav {
+        height: 80px;
+        background-color: #346F32;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .topnav h5 {
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .topnav .back-arrow svg {
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        left: 26px;
+        top: 30px;
+    }
+}

@@ -1,0 +1,98 @@
+@media (max-width: 480px) {
+    .spotlight {
+        background-color: #E9FFE8;
+        padding: 40px;
+        height: 50vh;
+    }
+
+    .spotlight .top-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .spotlight .top-box h6 {
+        font-size: 16px;
+        color: #346F32;
+        font-weight: 400;
+        font-family: "Preahvihear", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .spotlight .top-box h6 span {
+        color: #FEC700;
+    }
+
+    .spotlight .top-box .help {
+        border-radius: 35px;
+        padding: 8px 12px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+    }
+
+    .spotlight form {
+        display: flex;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .spotlight input {
+        background-color: #FFFFFF;
+        border-radius: 21px;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    .spotlight button {
+        background-color: #346F32;
+        padding: 12px 19px 12px 12px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        color: #fff;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .wallet-show {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 4px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .wallet-show p {
+        display: flex;
+        align-items: center;
+        color: #2B2129;
+        gap: 4px;
+    }
+
+    .wallet-show .deposit {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background-color: #346F32;
+        border-radius: 27px;
+        padding: 10px 9px;
+        gap: 4px;
+    }
+
+}

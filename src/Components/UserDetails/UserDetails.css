@@ -1,0 +1,49 @@
+.userdetails {
+    padding: 50px;
+}
+
+.userdetails .user-box {
+    background-color: #F3F3F3;
+    padding: 16px 17px;
+    border-radius: 22px;
+}
+
+.userdetails .user-box h5 {
+    color: #2B2129;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.userdetails .user-box form .formbox {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.userdetails .user-box form .formbox label {
+    font-size: 12px;
+    color: #808080;
+    font-weight: 400;
+    display: block;
+}
+
+.userdetails .user-box form .formbox input {
+    font-weight: 500;
+    font-size: 16px;
+    color: #2B2129;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.userdetails .user-box form .formbox select {
+    font-weight: 500;
+    font-size: 16px;
+    color: #2B2129;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}

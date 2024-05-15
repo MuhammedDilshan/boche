@@ -1,0 +1,99 @@
+.donatedetails {
+    padding: 0 30px;
+}
+
+.donate-detail-box {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 23px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+}
+
+.donate-detail-box .donate-amount .top-donate,
+.donate-detail-box .earned-ticket {
+    display: flex;
+    justify-content: space-between;
+}
+
+.donate-detail-box .donate-amount h6,
+.donate-detail-box .earned-ticket h6 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2B2129;
+}
+
+.donate-detail-box .donate-amount p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #2B2129;
+    margin-bottom: 16px;
+}
+
+.price-details {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 23px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+}
+
+.price-details h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B2129;
+    text-align: center;
+}
+
+.price-details .price,
+.price-details .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.price-details .price h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2B2129;
+}
+
+.price-details .price h6.freee {
+    color: #346F32;
+}
+
+.price-details .total h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2B2129;
+}
+
+.my-tickets .ticket-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.my-tickets .ticket-top h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B2129;
+}
+
+.my-tickets .ticket-top button {
+    font-size: 18px;
+    font-weight: 500;
+    color: #0014C8;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.my-tickets ul li {
+    margin-bottom: 20px;
+}
+
+.my-tickets ul li img {
+    width: 100%;
+    display: block;
+}

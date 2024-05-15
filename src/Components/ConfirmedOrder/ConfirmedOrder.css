@@ -1,0 +1,97 @@
+.confirmedorder {
+    padding: 30px 0;
+}
+
+.confirmedorder .top-tea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmedorder .top-tea .tea-left-top {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.confirmedorder .top-tea .tea-left-top img {
+    width: 100%;
+    display: block;
+}
+
+.confirmedorder .top-tea .tea-top-total h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #434343;
+    margin-bottom: 6px;
+}
+
+.confirmedorder .top-tea .tea-top-total p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #434343;
+    margin-bottom: 6px;
+}
+
+.confirmedorder .top-tea .tea-top-total h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2B2129;
+}
+
+.confirmed-details {
+    padding: 40px 0;
+}
+
+.confirmed-details .detail-box {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.confirmed-details .detail-box .left-line {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.confirmed-details .detail-box .left-line .tick {
+    background-color: #00890F;
+    width: 20px;
+    height: 20px;
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.confirmed-details .detail-box .left-line .tick svg {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+}
+
+.confirmed-details .detail-box .left-line .line {
+    width: 2px;
+    background-color: #00890F;
+    height: 60px;
+}
+
+.confirmed-details .detail-box .right-detail h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #808080;
+}
+
+.confirmed-details .detail-box .right-detail p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #808080;
+}
+
+.confirmed-details .detail-box .right-detail span {
+    font-size: 10px;
+    font-weight: 500;
+    color: #808080;
+}
