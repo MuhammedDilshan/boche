@@ -7,7 +7,7 @@ export const Header = () => {
   const [showProfile, setShowProfile] = useState(false);
 
   const handleUserImgClick = () => {
-    setShowProfile(!showProfile);
+    document.body.classList.add("modal-active", "overflow-hidden");
   };
 
   return (
@@ -21,7 +21,7 @@ export const Header = () => {
           <img src={Assets.Logo} alt="" />
         </div>
       </header>
-      {showProfile && <Profile />}
+      <Profile />
     </div>
   );
 };

@@ -1,5 +1,22 @@
 .profile {
     padding-bottom: 50px;
+    top: 0;
+    width: 100%;
+    position: relative;
+    z-index: 44 !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+
+    position: fixed;
+    top: 0;
+
+}
+
+.modal-active .profile {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .profile .profile-box {
@@ -80,4 +97,29 @@
     font-size: 14px;
     font-weight: 400;
     width: 110px;
+}
+
+.bottom {
+    background-color: #fff;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.overlay {
+    width: 100%;
+    display: block;
+    height: 100vh;
+    top: 0;
+    background-color: #00000085;
+    position: absolute;
+    z-index: -1;
+
+    transition: .3s ease-in-out;
+}
+
+.modal-active .overlay {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }

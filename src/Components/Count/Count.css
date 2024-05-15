@@ -54,7 +54,8 @@
 
     .round {
         position: absolute;
-        left: 60px;
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
         width: 240px;
         z-index: -1;
