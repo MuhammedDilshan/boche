@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import "./Login.css";
 import { Assets } from "../../Components/Assets/Assets";
 import { FaAngleLeft } from "react-icons/fa6";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {database} from "../../firebase"
+import { ref, onValue } from 'firebase/database'; 
+import { firestore } from "../../firebase";
+import { getDocs, collection, query, where,getFirestore } from "firebase/firestore";
+
+
+
 
 export const Login = () => {
   const otpPage = useNavigate();
@@ -12,14 +19,46 @@ export const Login = () => {
   const [formData, setFormData] = useState({
     mobile: "",
   });
+  const [numberValue, setNumberValue] = useState("");
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+  
+   
     setFormData({
       ...formData,
       [name]: value,
     });
   };
+
+  const [fixedOtpList, setFixedOtpList] = useState([]);
+
+  
+
+  const fixedOtpChecking = () => {
+  
+    const fixedOtpRef = ref(database, 'FIXED_OTP');
+
+     // Create a reference to the 'FIXED_OTP' node
+    onValue(fixedOtpRef, (snapshot) => { 
+      // Attach a listener to the reference
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        const otpList = Object.keys(data); // Extract the keys as the OTP list
+        setFixedOtpList(otpList);
+        console.log(otpList); 
+      } else {
+        console.log("dfjh"); // Handle the case where the snapshot does not exist
+      }
+    });
+  };
+
+  useEffect(() => {
+    fixedOtpChecking(); // Call the function to check for OTPs on component mount
+  }, []);
+
 
   const getOtpApi = async () => {
     setShowLoading(true);
@@ -58,15 +97,41 @@ export const Login = () => {
     } catch (e) {
       console.log("catch======================");
       otpPage("/otp");
-      setShowLoading(false);
+      setShowLoading(false);  
       setError("Failed to send OTP. Please try again later.");
     }
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault(); // Prevent default form submission
-    getOtpApi(); // Call getOtpApi function
+  const checkMobileInFirestore = async (mobile) => {
+    const userCollectionRef = collection(firestore, "user");
+    const q = query(userCollectionRef, where("mobile", "==", mobile));
+    const querySnapshot = await getDocs(q);
+    return !querySnapshot.empty; // Returns true if the mobile number exists
   };
+
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+    // getOtpApi(); // Call getOtpApi function
+    // fixedOtpChecking();
+
+    const mobileExists = await checkMobileInFirestore(formData.mobile);
+
+    const ref = collection(firestore, "user");
+    if (mobileExists) {
+
+    if(fixedOtpList.includes(formData.mobile)){
+      otpPage("/otp",{ state: { mobile: formData.mobile } });
+    }else{
+      alert("Invalid Mobile Number")
+    }
+  }else{
+    alert("User Not Found")
+  }
+
+
+   
+  };
+ 
 
   return (
     <div className="login">
@@ -78,11 +143,15 @@ export const Login = () => {
         <h5>Login</h5>
         <form onSubmit={handleLogin}>
           <input
-            type="number"
+            type="tel"
             placeholder="Mobile Number"
             name="mobile"
             value={formData.mobile}
             onChange={handleChange}
+            minLength={10}
+            maxLength={10}
+            pattern="[0-9]{10}"
+            required
           />
           <button type="submit" className="log-b">
             Login
