@@ -19,6 +19,9 @@ import Withdraw from "./Pages/Withdraw/Withdraw";
 import Wallet from "./Pages/Wallet/Wallet";
 import Success from "./Components/Success/Success";
 
+// bootstrap min css file
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">

@@ -100,10 +100,15 @@ const Otp = () => {
         <p>+91 98765 43210</p>
         <form action="">
           <OtpInput
+            type="tel"
             value={userOtp}
             onChange={setUserOtp}
             numInputs={6}
             renderInput={(props) => <input {...props} className="number" />}
+            minLength={10}
+            maxLength={10}
+            pattern="[0-9]{10}"
+            required
           />
         </form>
         <p>

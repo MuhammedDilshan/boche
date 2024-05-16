@@ -6,7 +6,9 @@ import { setDoc, collection, doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 export const Registration = () => {
+
   const otpPage = useNavigate();
+
   const timestamp = Date.now().toString();
   const ref = doc(collection(firestore, "USER"), timestamp);
   const [formData, setFormData] = useState({

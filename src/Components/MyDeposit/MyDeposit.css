@@ -45,6 +45,12 @@
     font-weight: 500;
 }
 
+.mydeposit input.active.enter {
+    color: #000 !important;
+    font-size: 32px;
+    font-weight: 500;
+}
+
 .mydeposit p {
     font-size: 14px;
     color: #2B2129;
