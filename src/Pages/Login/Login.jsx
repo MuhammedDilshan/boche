@@ -78,11 +78,15 @@ export const Login = () => {
         <h5>Login</h5>
         <form onSubmit={handleLogin}>
           <input
-            type="number"
+            type="tel"
             placeholder="Mobile Number"
             name="mobile"
             value={formData.mobile}
             onChange={handleChange}
+            minLength={10}
+            maxLength={10}
+            pattern="[0-9]{10}"
+            required
           />
           <button type="submit" className="log-b">
             Login

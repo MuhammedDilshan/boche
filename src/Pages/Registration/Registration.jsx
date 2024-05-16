@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import "./Registration.css";
 import { Assets } from "../../Components/Assets/Assets";
 import { firestore } from "../../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc, collection, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 export const Registration = () => {
-  const ref = collection(firestore, "user");
+  const timestamp = Date.now().toString();
+  const ref = doc(collection(firestore, "USER"), timestamp);
   const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
-    state: "Kerala", // Default state set to Kerala
+    NAME: "",
+    MOBILE: "",
+    STATE: "Kerala", // Default state set to Kerala
   });
 
   const handleChange = (e) => {
@@ -23,12 +25,12 @@ export const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(ref, formData); // Add 'await' here
+      await setDoc(ref, formData); // Add 'await' here
       alert("User details added successfully!");
       setFormData({
-        name: "",
-        mobile: "",
-        state: "Kerala", // Reset state to Kerala after submission
+        NAME: "",
+        MOBILE: "",
+        STATE: "Kerala", // Reset state to Kerala after submission
       });
     } catch (error) {
       console.error("Error adding user details: ", error);
@@ -47,22 +49,21 @@ export const Registration = () => {
           <input
             type="text"
             placeholder="Full Name"
-            name="name"
-            value={formData.name}
+            name="NAME"
+            value={formData.NAME}
             onChange={handleChange}
           />
           <input
             type="number"
             placeholder="Mobile Number"
-            name="mobile"
-            value={formData.mobile}
+            name="MOBILE"
+            value={formData.MOBILE}
             onChange={handleChange}
           />
-          <select name="state" value={formData.state} onChange={handleChange}>
+          <select name="STATE" value={formData.STATE} onChange={handleChange}>
             <option value="Kerala">Kerala</option>
           </select>
           <button type="submit" className="reg-b">
-            {" "}
             {/* Changed onSubmit to type="submit" */}
             Verify
           </button>
