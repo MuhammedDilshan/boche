@@ -2,7 +2,7 @@
     .spotlight {
         background-color: #E9FFE8;
         padding: 40px;
-        height: 50vh;
+        height: 52vh;
 
     }
 
@@ -20,6 +20,7 @@
         font-family: "Preahvihear", sans-serif;
         font-weight: 400;
         font-style: normal;
+        margin-bottom: 0;
     }
 
     .spotlight .top-box h6 span {
@@ -29,17 +30,25 @@
     .spotlight .top-box .help {
         border-radius: 35px;
         padding: 8px 12px;
-        background-color: #fff;
+        background-color: #008ECB;
         display: flex;
         align-items: center;
         gap: 4px;
+        width: 90px;
+        justify-content: center;
+    }
 
+    .spotlight .top-box .help p,
+    .spotlight .top-box .help svg {
+        color: #fff;
+        font-size: 12px;
     }
 
     .spotlight form {
         display: flex;
         position: relative;
         margin-bottom: 20px;
+        align-items: center;
     }
 
     .spotlight input {
@@ -56,13 +65,13 @@
 
     .spotlight button {
         background-color: #346F32;
-        padding: 12px 19px 12px 12px;
+        padding: 10px 18px;
         border-radius: 20px;
         border: none;
         outline: none;
         position: absolute;
         right: 4px;
-        top: 4px;
+        top: 7px;
         color: #fff;
         font-size: 14px;
         display: flex;
@@ -74,26 +83,30 @@
     .wallet-show {
         display: flex;
         justify-content: space-between;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 4px 10px;
+        background-color: #00890F;
+        border-radius: 16px;
+        padding: 10px 14px;
         width: 100%;
         box-sizing: border-box;
         align-items: center;
     }
 
     .wallet-show p {
-        display: flex;
-        align-items: center;
-        color: #2B2129;
-        gap: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .wallet-show h6 {
+        font-size: 32px;
+        font-weight: 600;
     }
 
     .wallet-show .deposit {
         display: flex;
         align-items: center;
         color: #fff;
-        background-color: #346F32;
+        background-color: #FFFFFF26;
         border-radius: 27px;
         padding: 10px 9px;
         gap: 4px;

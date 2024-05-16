@@ -18,35 +18,38 @@ import Deposit from "./Pages/Deposit/Deposit";
 import Withdraw from "./Pages/Withdraw/Withdraw";
 import Wallet from "./Pages/Wallet/Wallet";
 import Success from "./Components/Success/Success";
-
 // bootstrap min css file
 import "bootstrap/dist/css/bootstrap.min.css";
+import Splash from "./Components/Splash/Splash";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/earning" element={<Earnings />} />
-          <Route path="/pickup" element={<PickUp />} />
-          <Route path="/address" element={<Address />} />
-          <Route path="/delivery" element={<DeliveryAddress />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/option" element={<PaymentOption />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/otp" element={<Otp />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="/order" element={<Orders />} />
-          <Route path="/summery" element={<Summery />} />
-          <Route path="/coupen" element={<Coupons />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/deposit" element={<Deposit />} />
-          <Route path="/withdraw" element={<Withdraw />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/succes" element={<Success />} />
-        </Routes>
-      </Router>
+      <>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Splash />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/earning" element={<Earnings />} />
+            <Route path="/pickup" element={<PickUp />} />
+            <Route path="/address" element={<Address />} />
+            <Route path="/delivery" element={<DeliveryAddress />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/option" element={<PaymentOption />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/otp" element={<Otp />} />
+            <Route path="/register" element={<Registration />} />
+            <Route path="/order" element={<Orders />} />
+            <Route path="/summery" element={<Summery />} />
+            <Route path="/coupen" element={<Coupons />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/deposit" element={<Deposit />} />
+            <Route path="/withdraw" element={<Withdraw />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/succes" element={<Success />} />
+          </Routes>
+        </Router>
+      </>
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.splash {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash .boche-splash {
+    width: 200px;
+}
+
+.splash .boche-splash img {
+    width: 100%;
+    display: block;
+}

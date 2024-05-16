@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import "./Spotlight.css";
 import { MdOutlineCall } from "react-icons/md";
-import { FaPlus } from "react-icons/fa6";
-import { CiWallet } from "react-icons/ci";
-import { GiReceiveMoney } from "react-icons/gi";
+import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -37,28 +35,16 @@ export const Spotlight = () => {
         </div>
       </div>
       <form action="" onSubmit={handleSave}>
-        <input
-          type="text"
-          placeholder="Scan add coupon to your Coupons"
-          ref={messageRef}
-        />
-        <button type="submit">
-          <FaPlus />
-          Scan QR
-        </button>
+        <input type="text" placeholder="Enter coupon number" ref={messageRef} />
+        <button type="submit">Add</button>
       </form>
       <div className="wallet-show">
         <Link to="/wallet" className="link">
-          <p>
-            <CiWallet />
-            My Wallet - <span>₹800</span>
-          </p>
+          <p>My Wallet</p>
+          <h6>₹ 15,000</h6>
         </Link>
         <div className="deposit">
-          <Link to="/deposit" className="link">
-            <GiReceiveMoney />
-            Deposit
-          </Link>
+          <FaAngleRight />
         </div>
       </div>
     </div>
