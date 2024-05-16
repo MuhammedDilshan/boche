@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 const SelectPayment = () => {
   return (
     <div className="selectpayment">
-      <div className="my-wallet">
-        <h6>My Wallet</h6>
-        <p>₹1500</p>
+      {/* <div className="my-wallet"> */}
+      <p>₹1500</p>
+      {/* </div> */}
+      <h4>Pay Using</h4>
+      <div className="use-wallet">
+        <h5>Deposit Wallet</h5>
+        <FaArrowRightLong />
       </div>
       <div className="use-wallet">
-        <h5>Pay Using Wallet</h5>
+        <h5>Winning Wallet</h5>
         <FaArrowRightLong />
       </div>
       <Link to="/option" className="link">
