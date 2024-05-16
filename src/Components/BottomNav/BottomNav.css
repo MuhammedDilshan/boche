@@ -1,5 +1,8 @@
 @media (max-width: 480px) {
     .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         height: 80px;
         background: #346F32;
         display: flex;
@@ -12,6 +15,8 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+        margin-bottom: 0;
+        padding: 0;
     }
 
     .nav-bar li {

@@ -18,6 +18,7 @@ import Paytm from "./Images/Paytm 1.svg";
 import Bhim from "./Images/bhim.svg";
 import Boche from "./Images/boche.png";
 import boche_donate from "./Images/bochedonate.svg";
+import Splash from "./Images/boche-splash.svg";
 
 export const Assets = {
   Logo,
@@ -40,4 +41,5 @@ export const Assets = {
   Bhim,
   Boche,
   boche_donate,
+  Splash,
 };
