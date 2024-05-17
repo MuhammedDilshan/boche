@@ -11,7 +11,7 @@ const SelectAddress = () => {
 
   useEffect(() => {
     const fetchAddresses = async () => {
-      const addressCollection = collection(firestore, "address");
+      const addressCollection = collection(firestore, "ADDRESS");
       const snapshot = await getDocs(addressCollection);
       const addressesData = snapshot.docs.map((doc) => ({
         id: doc.id,

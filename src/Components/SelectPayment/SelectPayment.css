@@ -3,19 +3,31 @@
 }
 
 .selectpayment .my-wallet {
-    display: flex;
-    justify-content: space-between;
     padding: 18px 16px;
-    border-radius: 12px;
+    border-radius: 16px;
     background-color: #346F32;
     margin-bottom: 20px;
 }
 
-.selectpayment .my-wallet h6,
-.selectpayment .my-wallet p {
+.selectpayment h4 {
     font-size: 16px;
     font-weight: 600;
+    color: #2B2129;
+    margin: 16px 0;
+}
+
+.selectpayment .my-wallet h6 {
+    font-size: 12px;
+    font-weight: 500;
     color: #fff;
+    margin: 0;
+}
+
+.selectpayment p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #346F32;
+    text-align: center;
 }
 
 .selectpayment .use-wallet {

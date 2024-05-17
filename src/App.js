@@ -24,6 +24,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Splash from "./Components/Splash/Splash";
 import { ProductProvider } from "./Context/ProductContext";
 import { useProduct } from "./Context/ProductContext";
+import WinningWallet from "./Pages/WinningWallet/WinningWallet";
+import AccoutDetails from "./Components/AccoutDetails/AccoutDetails";
+
 
 function App() {
   
@@ -53,6 +56,8 @@ function App() {
             <Route path="/withdraw" element={<Withdraw />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/succes" element={<Success />} />
+            <Route path="/winning" element={<WinningWallet />} />
+            <Route path="/account" element={<AccoutDetails />} />
           </Routes>
         </Router>
         </ProductProvider>

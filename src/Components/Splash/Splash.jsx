@@ -19,8 +19,7 @@ const Splash = () => {
         <img src={Assets.Splash} alt="" />
       </div>
       <div className="nuerospine">
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src={Assets.NuroSpine} alt="" />
       </div>
     </div>
   );

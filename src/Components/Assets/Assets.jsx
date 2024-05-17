@@ -19,6 +19,13 @@ import Bhim from "./Images/bhim.svg";
 import Boche from "./Images/boche.png";
 import boche_donate from "./Images/bochedonate.svg";
 import Splash from "./Images/boche-splash.svg";
+import NuroSpine from "./Images/nuerospine.svg";
+import activeHo from "./Images/active-home.svg";
+import activeCou from "./Images/active-coupen.svg";
+import activeOr from "./Images/active-order.svg";
+import activeSt from "./Images/active-store.svg";
+import Transac from "./Images/transaction.svg";
+import activeTr from "./Images/activeTra.svg";
 
 export const Assets = {
   Logo,
@@ -41,5 +48,12 @@ export const Assets = {
   Bhim,
   Boche,
   boche_donate,
+  NuroSpine,
   Splash,
+  activeHo,
+  activeCou,
+  activeOr,
+  activeSt,
+  Transac,
+  activeTr,
 };

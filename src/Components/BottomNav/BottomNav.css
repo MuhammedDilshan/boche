@@ -24,6 +24,14 @@
         text-align: center;
     }
 
+    .link.active {
+        color: #FFEE01;
+    }
+
+    .link.active img {
+        fill: yellow;
+    }
+
     .link {
         color: #fff;
         text-decoration: none;

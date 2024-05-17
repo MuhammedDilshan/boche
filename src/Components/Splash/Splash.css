@@ -14,3 +14,15 @@
     width: 100%;
     display: block;
 }
+
+.nuerospine {
+    width: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 450px;
+}
+
+.nuerospine img {
+    width: 100%;
+    display: block;
+}
