@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./MyDeposit.css";
-import { MdAccountBalanceWallet } from "react-icons/md";
 
 const MyDeposit = () => {
   const [amount, setAmount] = useState();
@@ -38,11 +37,8 @@ const MyDeposit = () => {
   return (
     <div className="mydeposit">
       <div className="balance">
-        <div className="text">
-          <MdAccountBalanceWallet />
-          <h6>Current Balance</h6>
-        </div>
-        <h6>₹800</h6>
+        <p>Current Balance</p>
+        <h6>₹ 1,500</h6>
       </div>
       <form action="">
         <input

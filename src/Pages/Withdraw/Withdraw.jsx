@@ -8,7 +8,7 @@ const Withdraw = () => {
     <>
       <TopNav title="Withdraw" />
       <WithdrawDetails />
-      <Button title="Withdraw Now" />
+      <Button title="Redeem Now" />
     </>
   );
 };

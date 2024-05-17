@@ -1,9 +1,9 @@
 import React from "react";
-import "./MyWallet.css";
+import "./WinningPage.css";
 
-export const MyWallet = () => {
+const WinningPage = () => {
   return (
-    <div className="mywallet">
+    <div className="winningpage">
       <div className="wallet-box">
         <div className="winnin-b">Winning Wallet</div>
         <div className="deposit-b">Deposit Wallet</div>
@@ -48,3 +48,5 @@ export const MyWallet = () => {
     </div>
   );
 };
+
+export default WinningPage;

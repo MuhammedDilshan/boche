@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./BottomNav.css";
 import { Assets } from "../Assets/Assets";
 import { Link, useLocation } from "react-router-dom";
@@ -6,20 +6,20 @@ import { Link, useLocation } from "react-router-dom";
 export const BottomNav = () => {
   const location = useLocation();
 
-  const [activeImages, setActiveImages] = useState({
-    home: Assets.Home,
-    coupen: Assets.Coupen,
-    order: Assets.Order,
-    store: Assets.Store,
-  });
+  //   const [activeImages, setActiveImages] = useState({
+  //     home: Assets.Home,
+  //     coupen: Assets.Coupen,
+  //     order: Assets.Order,
+  //     store: Assets.Store,
+  //   });
 
-  // Function to handle image change when link is active
-  const handleImageChange = (link, activeImage) => {
-    setActiveImages((prevState) => ({
-      ...prevState,
-      [link]: activeImage,
-    }));
-  };
+  //   // Function to handle image change when link is active
+  //   const handleImageChange = (link, activeImage) => {
+  //     setActiveImages((prevState) => ({
+  //       ...prevState,
+  //       [link]: activeImage,
+  //     }));
+  //   };
 
   return (
     <div className="bottom-nav">
@@ -76,6 +76,21 @@ export const BottomNav = () => {
               <img src={Assets.Store} alt="" />
             )}
             Stores
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/store"
+            className={`link ${
+              location.pathname === "/transactions" ? "active" : ""
+            }`}
+          >
+            {location.pathname === "/transactions" ? (
+              <img src={Assets.activeTr} alt="" />
+            ) : (
+              <img src={Assets.Transac} alt="" />
+            )}
+            Transactions
           </Link>
         </li>
       </ul>

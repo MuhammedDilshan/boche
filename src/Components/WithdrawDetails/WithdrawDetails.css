@@ -3,22 +3,24 @@
 }
 
 .withdrawdetails .balance {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 50px;
+    background-color: #346F32;
+    border-radius: 16px;
+    padding: 10px 14px;
 }
 
-.withdrawdetails .balance .text {
-    display: flex;
-    align-items: center;
-}
 
 .withdrawdetails .balance h6 {
-    font-weight: 700;
-    font-size: 14px;
-    color: #2B2129;
-    margin-left: 6px;
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff;
+}
+
+.withdrawdetails .balance p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-align: left;
 }
 
 .withdrawdetails form {
@@ -75,4 +77,60 @@
     font-size: 21px;
     font-weight: 700;
     color: #2B2129;
+}
+
+.withdrw-bank {
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    padding: 16px 10px;
+}
+
+.withdrw-bank h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B2129;
+    margin-bottom: 20px;
+}
+
+.withdrw-bank .bank-details {
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 10px;
+    background-color: #fff;
+    margin-bottom: 14px;
+}
+
+.withdrw-bank .bank-details .bank p {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    color: #3f3f3f;
+}
+
+.withdrw-bank .edit-change {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.withdrw-bank .edit-change .edit {
+    background-color: #E9FFE8;
+    border-radius: 36px;
+    width: 56px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.withdrw-bank button {
+    background-color: #346F32;
+    color: #fff;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    border-radius: 31px;
+    width: 100%;
 }

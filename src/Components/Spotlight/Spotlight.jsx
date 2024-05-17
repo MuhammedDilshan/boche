@@ -8,7 +8,7 @@ import { addDoc, collection } from "firebase/firestore";
 
 export const Spotlight = () => {
   const messageRef = useRef();
-  const ref = collection(firestore, "messages");
+  const ref = collection(firestore, "MESSAGES");
 
   const handleSave = async (e) => {
     e.preventDefault();

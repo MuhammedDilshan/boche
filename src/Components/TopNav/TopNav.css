@@ -11,9 +11,10 @@
 
     .topnav h5 {
         border-radius: 20px;
-        padding: 10px 20px;
         color: #fff;
         text-align: center;
+        margin: 0;
+        font-size: 16px;
     }
 
     .topnav .back-arrow svg {

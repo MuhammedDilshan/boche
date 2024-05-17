@@ -8,7 +8,7 @@ export const Button = ({ title, page }) => {
   return (
     <div className="btn">
       <Link to={page}>
-        <button disabled={count == 0}>{title}</button>
+        <button disabled={count === 0}>{title}</button>
       </Link>
     </div>
   );
