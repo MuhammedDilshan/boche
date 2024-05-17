@@ -18,14 +18,20 @@ import Deposit from "./Pages/Deposit/Deposit";
 import Withdraw from "./Pages/Withdraw/Withdraw";
 import Wallet from "./Pages/Wallet/Wallet";
 import Success from "./Components/Success/Success";
+import { useState,useEffect } from "react";
 // bootstrap min css file
 import "bootstrap/dist/css/bootstrap.min.css";
 import Splash from "./Components/Splash/Splash";
+import { ProductProvider } from "./Context/ProductContext";
+import { useProduct } from "./Context/ProductContext";
 
 function App() {
+  
+
   return (
     <div className="App">
       <>
+      <ProductProvider>
         <Router>
           <Routes>
             <Route path="/" element={<Splash />} />
@@ -49,6 +55,7 @@ function App() {
             <Route path="/succes" element={<Success />} />
           </Routes>
         </Router>
+        </ProductProvider>
       </>
     </div>
   );

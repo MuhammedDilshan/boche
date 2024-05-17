@@ -4,18 +4,29 @@ import { Assets } from "../Assets/Assets";
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { useCount } from "../../Context/Context";
+import { useLocation,useNavigate } from "react-router-dom";
 
 export const Count = () => {
+  const location = useLocation();
+  const { 
+    productImages,
+    productPrice,
+    } = location.state || {};
+
+  console.log(productImages)
+  console.log(productPrice)
+  console.log("kskhdfgstrgfsyjgdhfksrhkgfhdf")
+
   const { count, totalPrice, increment, decrement } = useCount();
 
   return (
     <div className="count">
       <div className="tea-number">
         <img src={Assets.Line} alt="" className="round" />
-        <img src={Assets.Tea} alt="" className="tea" />
+        <img src={productImages} alt="" className="tea" />
         <h2>₹ {totalPrice}</h2>
         <h6>
-          <span>{count}</span> PKTS X ₹40
+          <span>{count}</span> PKTS X ₹{productPrice}
         </h6>
       </div>
       <div className="couter">

@@ -25,7 +25,7 @@ export const Login = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-  
+   
    
     setFormData({
       ...formData,
@@ -103,8 +103,8 @@ export const Login = () => {
   };
 
   const checkMobileInFirestore = async (mobile) => {
-    const userCollectionRef = collection(firestore, "user");
-    const q = query(userCollectionRef, where("mobile", "==", mobile));
+    const userCollectionRef = collection(firestore, "USERS");
+    const q = query(userCollectionRef, where("PHONE", "==", mobile));
     const querySnapshot = await getDocs(q);
     return !querySnapshot.empty; // Returns true if the mobile number exists
   };
@@ -116,7 +116,7 @@ export const Login = () => {
 
     const mobileExists = await checkMobileInFirestore(formData.mobile);
 
-    const ref = collection(firestore, "user");
+    // const ref = collection(firestore, "user");
     if (mobileExists) {
 
     if(fixedOtpList.includes(formData.mobile)){
