@@ -4,7 +4,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 
-const SelectPayment = () => {
+const SelectPayment = (selectedOption) => {
+  console.log(selectedOption);
   const [selectPayment, setSelectPayment] = useState({
     deposit: {
       selected: false,

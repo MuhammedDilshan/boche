@@ -31,6 +31,7 @@ import BottomNavFixed from "./Pages/BottomNavFixed/BottomNavFixed";
 import { Privacy } from "./Pages/Privacy/Privacy";
 import { Terms } from "./Pages/Terms/Terms";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import ChangeAddress from "./Components/ChangeAddress/ChangeAddress";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/about" element={<AboutUs />} />
+              <Route path="/change" element={<ChangeAddress />} />
             </Routes>
           </Router>
         </ProductProvider>
