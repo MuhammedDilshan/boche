@@ -14,14 +14,16 @@ const Splash = () => {
     return () => clearTimeout(timeout);
   }, [navigate]);
   return (
-    <div className="splash">
-      <div className="boche-splash">
-        <img src={Assets.Splash} alt="" />
+    <>
+      <div className="splash">
+        <div className="boche-splash">
+          <img src={Assets.Splash} alt="" />
+        </div>
       </div>
       <div className="nuerospine">
         <img src={Assets.NuroSpine} alt="" />
       </div>
-    </div>
+    </>
   );
 };
 

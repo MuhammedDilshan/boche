@@ -8,7 +8,7 @@ const Success = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      navigate("/");
+      navigate("/home");
     }, 4000);
 
     return () => clearTimeout(timeout);

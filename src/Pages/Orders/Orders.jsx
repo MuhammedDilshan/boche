@@ -1,6 +1,6 @@
 import React from "react";
 import { TopNav } from "../../Components/TopNav/TopNav";
-import { BottomNav } from "../../Components/BottomNav/BottomNav";
+// import { BottomNav } from "../../Components/BottomNav/BottomNav";
 import { MyOrders } from "../../Components/MyOrders/MyOrders";
 
 const Orders = () => {
@@ -8,7 +8,7 @@ const Orders = () => {
     <div>
       <TopNav title="My Orders" />
       <MyOrders />
-      <BottomNav />
+      {/* <BottomNav /> */}
     </div>
   );
 };
