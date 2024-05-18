@@ -2,19 +2,23 @@ import React from "react";
 import "./ConfirmedOrder.css";
 import { Assets } from "../Assets/Assets";
 import { MdDone } from "react-icons/md";
+import { useLocation,useNavigate } from "react-router-dom";
 
 const ConfirmedOrder = () => {
+  const location = useLocation();
+  const { orderId, orderDate, orderPrice, productQuantity, status,productImage,productPrice } = location.state || {  };
+  
   return (
     <div className="confirmedorder">
       <div className="top-tea">
         <div className="tea-left-top">
-          <img src={Assets.Tea} alt="" />
+          <img src={location.state?.productImage} alt="" />
         </div>
         <div className="tea-top-total">
-          <h6>10 PKTS X ₹40</h6>
-          <p>1 Kg</p>
-          <p>10 PKTS X ₹40</p>
-          <h5>₹400</h5>
+          <h6>{location.state?.productQuantity} PKTS X ₹{location.state?.productPrice}</h6>
+          <p>{(location.state?.productQuantity)/10}Kg</p>
+          <p>{location.state?.productQuantity} PKTS X ₹{location.state?.productPrice}</p>
+          <h5>₹{location.state?.orderPrice}</h5>
         </div>
       </div>
       <div className="confirmed-details">

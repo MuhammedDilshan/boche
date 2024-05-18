@@ -12,15 +12,15 @@ const BottomNavFixed = () => {
   const location = useLocation();
   
 
-  console.log(location.state?.productId)
-  console.log(location.state?.productImages)
-  console.log(location.state?.productPrice)
+  // console.log(location.state?.productId)
+  // console.log(location.state?.productImages)
+  // console.log(location.state?.productPrice)
   // console.log(navigator)
 
   const renderScreen = () => {
     switch (currentScreen) {
       case "home":
-        return <Home productImages={location.state?.productImages} productPrice={location.state?.productPrice} />;
+        return <Home />;
       case "coupen":
         return <Coupons />;
       case "order":
@@ -30,7 +30,7 @@ const BottomNavFixed = () => {
       case "transactions":
         return <Transactions />;
       default:
-        return <Home productImages={location.state?.productImages} productPrice={location.state?.productPrice}/>;
+        return <Home/>;
     }
   };
   return (
