@@ -5,6 +5,11 @@ import { Link, useLocation } from "react-router-dom";
 
 export const BottomNav = () => {
   const location = useLocation();
+  
+  const { 
+    productImages,
+    productPrice,
+    } = location.state || {}; 
 
   //   const [activeImages, setActiveImages] = useState({
   //     home: Assets.Home,

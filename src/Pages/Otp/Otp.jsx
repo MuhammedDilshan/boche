@@ -86,13 +86,7 @@ const Otp = () => {
     });
   };
 
-  const verifyOtp = () => {
-    if (otp.includes(userOtp)) {
-      navigate("/");
-    }else{
-      alert("please Enter valid Otp")
-    }
-  };
+
   const [loginUser, setLoginUser] = useState({
     id: '',
     name: '',
@@ -235,6 +229,7 @@ const productModelList=[];
               "loginUserId":loginUser.id,
               "loginUserType":loginUser.type,
               "loginUserPhone":loginUser.phone,
+              
             }});
              
             // Redirect to another component

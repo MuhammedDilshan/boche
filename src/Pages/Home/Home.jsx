@@ -15,9 +15,12 @@ export const Home = () => {
   
 
   console.log(location.state?.productId)
-  console.log(location.state?.productImages)
+  console.log('Product Images:',location.state?.productImages)
   console.log(location.state?.productPrice)
   console.log(navigator)
+  
+
+
  
 
   // console.log('Product Images:', productImages);
@@ -31,7 +34,7 @@ export const Home = () => {
       <Count productImages={location.state?.productImages} productPrice={location.state?.productPrice} />
       <Social />
       <Button title="Buy Now" page= {location.state?.loginUserId === null ? "/login":"/address"} />
-      <BottomNav />
+      <BottomNav productImages={location.state?.productImages} productPrice={location.state?.productPrice} />
     </>
   );
 };
