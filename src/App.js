@@ -37,7 +37,6 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Splash />} />
-              <Route path="/home" element={<Home />} />
               <Route path="/earning" element={<Earnings />} />
               <Route path="/pickup" element={<PickUp />} />
               <Route path="/address" element={<Address />} />
@@ -58,7 +57,7 @@ function App() {
               <Route path="/winning" element={<WinningWallet />} />
               <Route path="/account" element={<AccoutDetails />} />
               <Route path="/transactions" element={<Transactions />} />
-              <Route path="/fixed" element={<BottomNavFixed />} />
+              <Route path="/home" element={<BottomNavFixed />} />
             </Routes>
           </Router>
         </ProductProvider>
