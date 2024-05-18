@@ -12,12 +12,18 @@ import { useEffect } from "react";
 
 export const Home = () => {
   const location = useLocation();
+  const { 
+    productImages,
+    productPrice,
+    } = location.state || {};
+
+    const loginUserId = localStorage.getItem('loginUserId');
   
 
-  console.log(location.state?.productId)
-  console.log(location.state?.productImages)
-  console.log(location.state?.productPrice)
-  console.log(navigator)
+  // console.log(location.state?.productId)
+  // console.log(location.state?.productImages)
+  // console.log(location.state?.productPrice)
+  // console.log(navigator)
  
 
   // console.log('Product Images:', productImages);
@@ -28,11 +34,11 @@ export const Home = () => {
     <>
       <Header />
       <Spotlight />
-      <Count productImages={location.state?.productImages} productPrice={location.state?.productPrice} />
+      <Count productImages={productImages} productPrice={productPrice} />
       <Social />
       <Button
         title="Buy Now"
-        page={location.state?.loginUserId === undefined ? "/login" : "/address"}
+        page={loginUserId === undefined ? "/login" : "/address"}
       />
     </>
   );

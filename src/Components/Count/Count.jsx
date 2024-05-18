@@ -7,11 +7,10 @@ import { useCount } from "../../Context/Context";
 import { useLocation,useNavigate } from "react-router-dom";
 
 export const Count = () => {
-  const location = useLocation();
-  const { 
-    productImages,
-    productPrice,
-    } = location.state || {};
+ 
+
+  const productPrice = localStorage.getItem('productPrice');
+  const productImages = localStorage.getItem('productImages');
 
   console.log(productImages)
   console.log(productPrice)

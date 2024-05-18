@@ -122,6 +122,7 @@ const Splash = () => {
           console.log(productModelList[0].id);
           console.log(productModelList[0].name);
           console.log(productModelList[0].images);
+         
 
           console.log("productModelList...................");
           // setProductData({
@@ -142,6 +143,11 @@ const Splash = () => {
             // Do something if there are more than one product
           } else {
             // console.log("irshadsssss")
+            localStorage.setItem('productId', productModelList[0].id);
+            localStorage.setItem('productName', productModelList[0].name);
+            localStorage.setItem('productImages', productModelList[0].images);
+            localStorage.setItem('productPrice', productModelList[0].price);
+
             navigator("/home",{state:{
               "productId":productModelList[0].id,
               "productName":productModelList[0].name,
