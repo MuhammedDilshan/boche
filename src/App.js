@@ -28,6 +28,9 @@ import WinningWallet from "./Pages/WinningWallet/WinningWallet";
 import AccoutDetails from "./Components/AccoutDetails/AccoutDetails";
 import Transactions from "./Pages/Transactions/Transactions";
 import BottomNavFixed from "./Pages/BottomNavFixed/BottomNavFixed";
+import { Privacy } from "./Pages/Privacy/Privacy";
+import { Terms } from "./Pages/Terms/Terms";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
               <Route path="/account" element={<AccoutDetails />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/home" element={<BottomNavFixed />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/about" element={<AboutUs />} />
             </Routes>
           </Router>
         </ProductProvider>

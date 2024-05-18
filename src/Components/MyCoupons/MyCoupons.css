@@ -1,5 +1,5 @@
 .mycoupons {
-    padding: 30px;
+    padding: 30px 30px 70px 30px;
 }
 
 .mycoupons .my-earnings {
@@ -7,7 +7,7 @@
     justify-content: space-between;
     border-radius: 30px;
     padding: 12px;
-    background-color: #346F32;
+    border: 0.3px solid #346F32;
     align-items: center;
 }
 
@@ -17,13 +17,13 @@
 }
 
 .mycoupons .my-earnings .left-cont svg {
-    color: #FFD502;
+    color: #346F32;
     margin-right: 6px;
 }
 
 .mycoupons .my-earnings .left-cont h6 {
     font-size: 12px;
-    color: #FFD502;
+    color: #346F32;
     font-weight: 600;
     margin: 0;
 }
@@ -36,12 +36,12 @@
 .mycoupons .my-earnings .right-cont h6 {
     font-size: 16px;
     font-weight: 600;
-    color: #FFD502;
+    color: #346F32;
     margin: 0;
 }
 
 .mycoupons .my-earnings .right-cont svg {
-    color: #FFD502;
+    color: #346F32;
     margin-left: 6px;
 
 }
@@ -93,6 +93,8 @@
     font-size: 16px;
     font-weight: 400;
     color: #2B2129;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2B2129;
 }
 
 .mycoupons .mytick li {
@@ -101,4 +103,5 @@
 
 .mycoupons .mytick li img {
     display: block;
+    width: 100%;
 }

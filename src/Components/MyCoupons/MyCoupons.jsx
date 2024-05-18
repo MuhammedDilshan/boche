@@ -2,7 +2,6 @@ import React from "react";
 import "./MyCoupons.css";
 import { BsFillTrophyFill } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa6";
-import { MdQrCodeScanner } from "react-icons/md";
 import Ticker from "../Assets/Images/ticket.png";
 
 const MyCoupons = () => {
@@ -24,10 +23,10 @@ const MyCoupons = () => {
       </div>
       <ul className="draw">
         <li>My Coupons</li>
-        <li>Won Coupons</li>
-        <li>Draw Lots</li>
+        {/* <li>Won Coupons</li>
+        <li>Draw Lots</li> */}
       </ul>
-      <ul className="mytick">
+      <ul className="mytick" style={{ padding: "0" }}>
         <li>
           <img src={Ticker} alt="" />
         </li>

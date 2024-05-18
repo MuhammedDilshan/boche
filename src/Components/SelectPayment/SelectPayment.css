@@ -1,5 +1,5 @@
 .selectpayment {
-    padding: 50px;
+    padding: 50px 30px;
 }
 
 .selectpayment .my-wallet {
@@ -31,19 +31,105 @@
 }
 
 .selectpayment .use-wallet {
-    background-color: #E9FFE8;
     padding: 18px 16px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    border: 1px solid #e2e2e2;
+    transition: .3s ease-in-out;
+}
+
+.selectpayment .use-wallet.choosed {
+    background-color: #E9FFE8;
+
+}
+
+
+.selectpayment .active-payment.use-wallet {
+    align-items: flex-start;
+
+}
+
+.selectpayment .use-wallet .top span {
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+
+}
+
+.selectpayment .use-wallet .bottom-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.selectpayment .use-wallet .bottom-box .price-input {
+    display: flex;
+    align-items: center;
+
+}
+
+.selectpayment .use-wallet .bottom-box .price-input span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: #346F32;
+    width: 30px;
+    height: 30px;
+}
+
+.selectpayment .use-wallet .bottom-box .price-input span svg {
+    fill: #fff;
+}
+
+.selectpayment .use-wallet .bottom-box input[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+}
+
+.selectpayment .use-wallet .bottom-box input.price-input {
+    width: 120px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: none;
+    margin-top: 16px;
+
+    background-color: #F2F2F2;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.selectpayment .use-wallet .bottom-box input.price-input::placeholder {
+    font-size: 14px;
+}
+
+.selectpayment .use-wallet .bottom-box button {
+    display: block;
+
+}
+
+.selectpayment .use-wallet .top span.paid-price {
+    color: #346F32;
+}
+
+.selectpayment .use-wallet:hover {
+    background-color: #E9FFE8;
+
 }
 
 .selectpayment .use-wallet h5 {
     font-size: 16px;
     font-weight: 600;
     color: #2B2129;
+    margin-bottom: 0;
 }
 
 .selectpayment .use-wallet svg {
