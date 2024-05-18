@@ -4,7 +4,12 @@ import { Assets } from "../Assets/Assets";
 import { Link, useLocation } from "react-router-dom";
 
 export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
-  const location = useLocation();
+  // const location = useLocation();
+  
+  // const { 
+  //   productImages,
+  //   productPrice,
+  //   } = location.state || {}; 
 
   const handleNavClick = (screen) => {
     setCurrentScreen(screen);
@@ -30,7 +35,7 @@ export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
       <ul className="nav-bar">
         <li>
           <Link
-            to="#"
+            // to="#"
             className={`link ${currentScreen === "home" ? "active" : ""}`}
             onClick={() => handleNavClick("home")}
           >
@@ -43,7 +48,7 @@ export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
         </li>
         <li>
           <Link
-            to="#"
+            // to="#"
             className={`link ${currentScreen === "coupen" ? "active" : ""}`}
             onClick={() => handleNavClick("coupen")}
           >
@@ -58,7 +63,7 @@ export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
         </li>
         <li>
           <Link
-            to="#"
+            // to="#"
             className={`link ${currentScreen === "order" ? "active" : ""}`}
             onClick={() => handleNavClick("order")}
           >
@@ -71,7 +76,7 @@ export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
         </li>
         <li>
           <Link
-            to="#"
+            // to="#"
             className={`link ${currentScreen === "store" ? "active" : ""}`}
             onClick={() => handleNavClick("store")}
           >
@@ -84,7 +89,7 @@ export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
         </li>
         <li>
           <Link
-            to="#"
+            // to="#"
             className={`link ${
               currentScreen === "transactions" ? "active" : ""
             }`}

@@ -89,13 +89,7 @@ const Otp = () => {
     });
   };
 
-  const verifyOtp = () => {
-    if (otp.includes(userOtp)) {
-      navigate("/");
-    } else {
-      alert("please Enter valid Otp");
-    }
-  };
+
   const [loginUser, setLoginUser] = useState({
     id: "",
     name: "",
@@ -219,53 +213,62 @@ const Otp = () => {
           loginUserPhoto: loginUser.photo,
         });
 
-        if (productModelList.length > 1) {
-          // Do something if there are more than one product
-        } else {
-          // homePage("/home",{
-          //   productId: productModelList[0].id,productName:productModelList[0].name, productImages:productModelList[0].images,
-          //   productPrice:productModelList[0].price,loginUserName:loginUser.name,loginUserId:loginUser.id,loginUserType:loginUser.type,
-          //   loginUserPhone:loginUser.phone,loginUserPlace:loginUser.place,loginUserPhoto:loginUser.photo
-          // });
-          navigator("/home", {
-            state: {
-              productId: productModelList[0].id,
-              productName: productModelList[0].name,
-              productImages: productModelList[0].images,
-              productPrice: productModelList[0].price,
-              loginUserName: loginUser.name,
-              loginUserId: loginUser.id,
-              loginUserType: loginUser.type,
-              loginUserPhone: loginUser.phone,
-            },
-          });
+          if (productModelList.length > 1) {
+            // Do something if there are more than one product
+          } else {
 
-          // Redirect to another component
-          // callNextReplacement(
-          //   <BottomBar
-          //     productId={productModelList[0].id}
-          //     productName={productModelList[0].name}
-          //     productImages={productModelList[0].images}
-          //     productPrice={productModelList[0].price.toString()}
-          //     loginUserName={loginUser.name}
-          //     loginUserId={loginUser.id}
-          //     loginUserType={loginUser.type}
-          //     loginUserPhone={loginUser.phone}
-          //     loginUserPlace={loginUser.place}
-          //     loginUserPhoto={loginUser.photo}
-          //   />,
-          //   context
-          // );
+            // homePage("/home",{
+            //   productId: productModelList[0].id,productName:productModelList[0].name, productImages:productModelList[0].images,
+            //   productPrice:productModelList[0].price,loginUserName:loginUser.name,loginUserId:loginUser.id,loginUserType:loginUser.type,
+            //   loginUserPhone:loginUser.phone,loginUserPlace:loginUser.place,loginUserPhoto:loginUser.photo
+            // });
+            navigator("/home",{state:{
+              "productId":productModelList[0].id,
+              "productName":productModelList[0].name,
+              "productImages":productModelList[0].images,
+              "productPrice":productModelList[0].price,
+              "loginUserName":loginUser.name,
+              "loginUserId":loginUser.id,
+              "loginUserType":loginUser.type,
+              "loginUserPhone":loginUser.phone,
+              
+            }});
+             
+            // Redirect to another component
+            // callNextReplacement(
+            //   <BottomBar
+            //     productId={productModelList[0].id}
+            //     productName={productModelList[0].name}
+            //     productImages={productModelList[0].images}
+            //     productPrice={productModelList[0].price.toString()}
+            //     loginUserName={loginUser.name}
+            //     loginUserId={loginUser.id}
+            //     loginUserType={loginUser.type}
+            //     loginUserPhone={loginUser.phone}
+            //     loginUserPlace={loginUser.place}
+            //     loginUserPhoto={loginUser.photo}
+            //   />,
+            //   context
+            // );
+          }
+        } else {
+          // Redirect to login screen if user not found
         }
-      } else {
-        // Redirect to login screen if user not found
+      } catch (error) {
+        // Handle error
+        console.error('Sorry, some error occurred:', error);
+        // You might want to show a snackbar or toast here
       }
-    } catch (error) {
-      // Handle error
-      console.error("Sorry, some error occurred:", error);
-      // You might want to show a snackbar or toast here
-    }
-  };
+    };
+
+   
+
+
+
+
+
+
+
 
   return (
     <div className="otp">

@@ -1,50 +1,109 @@
 import React, { useState } from "react";
 import "./UserDetails.css";
 import { firestore } from "../../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc, collection,doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-export const UserDetails = () => {
+export const UserDetails = ({ frmId, toId  }) => {
   const navigate = useNavigate();
-  const ref = collection(firestore, "ADDRESS");
-  const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
-    landmark: "",
-    locality: "",
-    city: "",
-    pincode: "",
-    state: "Kerala",
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const [userName, setUserName] = useState("");
+  const [userMobile, setUserMobile] = useState("");
+  const [userLandMark, setUserLandMark] = useState("");
+  const [userLocality, setUserLocality] = useState("");
+  const [userCity, setUserCity] = useState("");
+  const [userPinCode, setUserPinCode] = useState("");
+  const [userState, setUserState] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const cusId = localStorage.getItem('loginUserId');
+  console.log(cusId,"irshad")
+  
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const id = frmId === "new" ? Date.now().toString() : toId;
+
+    const addressMap = {
+      USER_NAME: userName,
+      USER_MOBILE: userMobile,
+      USER_LAND_MARK: userLandMark,
+      USER_LOCALITY: userLocality,
+      USER_CITY: userCity,
+      USER_PIN_CODE: userPinCode,
+      USER_STATE: userState,
+    };
+
+    const cosMap = {
+      LAST_USED_USER_NAME: userName,
+      LAST_USED_USER_NUMBER: userMobile,
+      LAST_USED_USER_ADDRESS: `${userLandMark}, ${userLocality}, ${userCity}, ${userState}, ${userPinCode}`,
+    };
+    console.log(frmId,"ddddddddddddd")
+
+    const ref = doc(collection(firestore, "CUSTOMERS", cusId, "DELIVER_ADDRESS"), id);
+    const ref2 = doc(firestore, "CUSTOMERS", cusId, "DELIVER_ADDRESS", id);
+    
+
     try {
-      await addDoc(ref, formData); // Add 'await' here
+      if (frmId === "new") {
+        console.log("irshhh___test")
+        await setDoc(ref, addressMap, { merge: true });
+      } else {
+        console.log("irshhh___test__fail")
+        await setDoc(ref2, addressMap, { merge: true });
+      }
+
+      await setDoc(doc(firestore, "CUSTOMERS", cusId), cosMap, { merge: true });
+
       alert("User details added successfully!");
-      setFormData({
-        name: "",
-        mobile: "",
-        landmark: "",
-        locality: "",
-        city: "",
-        pincode: "",
-        state: "Kerala",
-      });
-      navigate("/address");
+      // Fetch address or perform any additional tasks
+      // Example: await fetchAddress(cusId);
+      navigate("/address");;  // Navigate to some path after submission
     } catch (error) {
-      console.error("Error adding user details: ", error);
+      console.error("Error adding document: ", error);
       alert("An error occurred while adding user details. Please try again.");
     }
   };
+
+  // const ref = collection(firestore, "ADDRESS");
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   mobile: "",
+  //   landmark: "",
+  //   locality: "",
+  //   city: "",
+  //   pincode: "",
+  //   state: "Kerala",
+  // });
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await addDoc(ref, formData); // Add 'await' here
+  //     alert("User details added successfully!");
+  //     setFormData({
+  //       name: "",
+  //       mobile: "",
+  //       landmark: "",
+  //       locality: "",
+  //       city: "",
+  //       pincode: "",
+  //       state: "Kerala",
+  //     });
+  //     navigate("/address");
+  //   } catch (error) {
+  //     console.error("Error adding user details: ", error);
+  //     alert("An error occurred while adding user details. Please try again.");
+  //   }
+  // };
 
   return (
     <div className="userdetails">
@@ -57,8 +116,8 @@ export const UserDetails = () => {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -67,8 +126,8 @@ export const UserDetails = () => {
               type="number"
               id="mobile"
               name="mobile"
-              value={formData.mobile}
-              onChange={handleChange}
+              value={userMobile}
+              onChange={(e) => setUserMobile(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -77,8 +136,8 @@ export const UserDetails = () => {
               type="text"
               id="landmark"
               name="landmark"
-              value={formData.landmark}
-              onChange={handleChange}
+              value={userLandMark}
+              onChange={(e) => setUserLandMark(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -87,8 +146,8 @@ export const UserDetails = () => {
               type="text"
               id="locality"
               name="locality"
-              value={formData.locality}
-              onChange={handleChange}
+              value={userLocality}
+              onChange={(e) => setUserLocality(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -97,8 +156,8 @@ export const UserDetails = () => {
               type="text"
               id="city"
               name="city"
-              value={formData.city}
-              onChange={handleChange}
+              value={userCity}
+              onChange={(e) => setUserCity(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -107,8 +166,8 @@ export const UserDetails = () => {
               type="number"
               id="pincode"
               name="pincode"
-              value={formData.pincode}
-              onChange={handleChange}
+              value={userPinCode}
+              onChange={(e) => setUserPinCode(e.target.value)}
             />
           </div>
           <div className="formbox">
@@ -116,8 +175,8 @@ export const UserDetails = () => {
             <select
               id="state"
               name="state"
-              value={formData.state}
-              onChange={handleChange}
+              value={userState}
+              onChange={(e) => setUserState(e.target.value)}
             >
               <option value="Andhra Pradesh">Andhra Pradesh</option>
               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
