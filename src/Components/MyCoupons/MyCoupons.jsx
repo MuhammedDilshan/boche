@@ -19,10 +19,8 @@ const MyCoupons = () => {
         </div>
       </div>
       <div className="scan">
-        <h6>Scan add coupon to your Coupons</h6>
-        <button>
-          Scan QR <MdQrCodeScanner />
-        </button>
+        <input type="text" placeholder="Scan add coupon to your Coupons" />
+        <button>Add</button>
       </div>
       <ul className="draw">
         <li>My Coupons</li>

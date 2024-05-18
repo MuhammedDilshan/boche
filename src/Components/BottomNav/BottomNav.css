@@ -22,6 +22,7 @@
     .nav-bar li {
         color: #fff;
         text-align: center;
+        font-size: 12px;
     }
 
     .link.active {

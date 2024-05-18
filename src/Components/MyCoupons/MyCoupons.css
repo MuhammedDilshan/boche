@@ -25,6 +25,7 @@
     font-size: 12px;
     color: #FFD502;
     font-weight: 600;
+    margin: 0;
 }
 
 .mycoupons .my-earnings .right-cont {
@@ -36,6 +37,7 @@
     font-size: 16px;
     font-weight: 600;
     color: #FFD502;
+    margin: 0;
 }
 
 .mycoupons .my-earnings .right-cont svg {
@@ -49,12 +51,19 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    background-color: #F2F2F2;
+    border-radius: 21px;
+    padding: 0 0 0 20px;
 }
 
-.mycoupons .scan h6 {
+.mycoupons .scan input {
     font-size: 14px;
     font-weight: 400;
     color: #2B2129;
+    border: none;
+    outline: none;
+    width: 80%;
+    background-color: #F2F2F2;
 }
 
 .mycoupons .scan button {

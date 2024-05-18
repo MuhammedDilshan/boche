@@ -1,0 +1,48 @@
+.list-tra {
+    display: flex;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.list-tra li {
+    padding: 10px;
+    border-radius: 16px;
+    border: 0.3px solid #353535;
+}
+
+.list-amount {
+    padding: 20px 20px 50px 20px;
+}
+
+.list-amount .single-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
+.list-amount .single-item .date-time p,
+.list-amount .single-item .cash-details p {
+    font-size: 12px;
+    color: #346F32;
+}
+
+.list-amount .single-item h4 {
+    font-size: 20px;
+    color: #346F32;
+    font-weight: 400;
+}
+
+.list-amount .single-item .cash-draw h4 {
+    font-size: 20px;
+    color: #FF0100;
+    font-weight: 400;
+}
+
+.list-amount .single-item .cash-draw p {
+    font-size: 12px;
+    color: #FF0100;
+}

@@ -1,18 +1,19 @@
 .registration {
     background-color: #fff;
-    padding: 50px 20px 20px 30px;
+    padding: 150px 20px 70px 30px;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .registration .img-box {
-    width: 140px;
-    margin: 0 auto 10px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.registration .img-box img {
-    display: block;
-    width: 100%;
-}
+
 
 .registration .register-box {
     text-align: center;
@@ -20,10 +21,16 @@
     padding: 0 20px;
 }
 
-.registration .register-box h5 {
-    font-size: 19px;
-    font-weight: 500;
+.registration .img-box p {
+    font-size: 12px;
+    font-weight: 400;
     color: #808080;
+}
+
+.registration .img-box h5 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2B2129;
     margin-bottom: 20px;
 }
 
@@ -69,4 +76,16 @@
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 14px;
+}
+
+.register-box .resend {
+    outline: none;
+    background: transparent;
+    border: none;
+    color: #346F32;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 2px solid #346F32;
+    text-align: center;
+    margin-top: 6px;
 }

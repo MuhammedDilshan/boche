@@ -1,5 +1,5 @@
 .splash {
-    height: 100vh;
+    height: 86vh;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -17,9 +17,7 @@
 
 .nuerospine {
     width: 100px;
-    position: absolute;
-    bottom: 50px;
-    left: 450px;
+    margin: 0 auto;
 }
 
 .nuerospine img {

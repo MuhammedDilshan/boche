@@ -60,8 +60,14 @@
     color: #434343;
 }
 
+
 .order-list .order-item .order-box .dliver span {
     font-size: 10px;
     font-weight: 500;
     color: #434343;
+}
+
+.order-list .details {
+    color: #434343;
+    text-decoration: none;
 }

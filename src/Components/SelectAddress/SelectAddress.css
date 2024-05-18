@@ -256,3 +256,14 @@ h5.heading {
     margin-bottom: 20px;
     border-radius: 12px !important;
 }
+
+.bottom-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-edit input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}

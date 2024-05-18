@@ -42,7 +42,7 @@ export const DonateDetails = () => {
           <h6>My Tickets</h6>
           <button>See More</button>
         </div>
-        <ul>
+        <ul style={{ padding: "0" }}>
           <li>
             <img src={Ticket} alt="" />
           </li>

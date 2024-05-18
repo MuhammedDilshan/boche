@@ -3,13 +3,17 @@ import "./BottomNav.css";
 import { Assets } from "../Assets/Assets";
 import { Link, useLocation } from "react-router-dom";
 
-export const BottomNav = () => {
+export const BottomNav = ({ setCurrentScreen, currentScreen }) => {
   const location = useLocation();
   
   const { 
     productImages,
     productPrice,
     } = location.state || {}; 
+
+  const handleNavClick = (screen) => {
+    setCurrentScreen(screen);
+  };
 
   //   const [activeImages, setActiveImages] = useState({
   //     home: Assets.Home,
@@ -31,70 +35,74 @@ export const BottomNav = () => {
       <ul className="nav-bar">
         <li>
           <Link
-            to="/home"
-            className={`link ${location.pathname === "/home" ? "active" : ""}`}
+            to="#"
+            className={`link ${currentScreen === "home" ? "active" : ""}`}
+            onClick={() => handleNavClick("home")}
           >
-            {location.pathname === "/home" ? (
-              <img src={Assets.activeHo} alt="" />
-            ) : (
-              <img src={Assets.Home} alt="" />
-            )}
+            <img
+              src={currentScreen === "home" ? Assets.activeHo : Assets.Home}
+              alt="Home"
+            />
             Home
           </Link>
         </li>
         <li>
           <Link
-            to="/coupen"
-            className={`link ${
-              location.pathname === "/coupen" ? "active" : ""
-            }`}
+            to="#"
+            className={`link ${currentScreen === "coupen" ? "active" : ""}`}
+            onClick={() => handleNavClick("coupen")}
           >
-            {location.pathname === "/coupen" ? (
-              <img src={Assets.activeCou} alt="" />
-            ) : (
-              <img src={Assets.Coupen} alt="" />
-            )}
+            <img
+              src={
+                currentScreen === "coupen" ? Assets.activeCou : Assets.Coupen
+              }
+              alt="My Coupons"
+            />
             My Coupons
           </Link>
         </li>
         <li>
           <Link
-            to="/order"
-            className={`link ${location.pathname === "/order" ? "active" : ""}`}
+            to="#"
+            className={`link ${currentScreen === "order" ? "active" : ""}`}
+            onClick={() => handleNavClick("order")}
           >
-            {location.pathname === "/order" ? (
-              <img src={Assets.activeOr} alt="" />
-            ) : (
-              <img src={Assets.Order} alt="" />
-            )}
+            <img
+              src={currentScreen === "order" ? Assets.activeOr : Assets.Order}
+              alt="My Orders"
+            />
             My Orders
           </Link>
         </li>
         <li>
           <Link
-            to="/store"
-            className={`link ${location.pathname === "/store" ? "active" : ""}`}
+            to="#"
+            className={`link ${currentScreen === "store" ? "active" : ""}`}
+            onClick={() => handleNavClick("store")}
           >
-            {location.pathname === "/store" ? (
-              <img src={Assets.activeSt} alt="" />
-            ) : (
-              <img src={Assets.Store} alt="" />
-            )}
+            <img
+              src={currentScreen === "store" ? Assets.activeSt : Assets.Store}
+              alt="Stores"
+            />
             Stores
           </Link>
         </li>
         <li>
           <Link
-            to="/store"
+            to="#"
             className={`link ${
-              location.pathname === "/transactions" ? "active" : ""
+              currentScreen === "transactions" ? "active" : ""
             }`}
+            onClick={() => handleNavClick("transactions")}
           >
-            {location.pathname === "/transactions" ? (
-              <img src={Assets.activeTr} alt="" />
-            ) : (
-              <img src={Assets.Transac} alt="" />
-            )}
+            <img
+              src={
+                currentScreen === "transactions"
+                  ? Assets.activeTr
+                  : Assets.Transac
+              }
+              alt="Transactions"
+            />
             Transactions
           </Link>
         </li>

@@ -71,11 +71,17 @@ const SelectAddress = () => {
                             </div>
                             <button className="edit">Edit</button>
                           </div>
-                          <h6>{address.name}</h6>
-                          <p>
-                            {address.landmark}, {address.locality},{" "}
-                            {address.city}, {address.state} {address.pincode}
-                          </p>
+                          <div className="bottom-edit">
+                            <div className="addredd-get">
+                              <h6>{address.name}</h6>
+                              <p>
+                                {address.landmark}, {address.locality},{" "}
+                                {address.city}, {address.state}{" "}
+                                {address.pincode}
+                              </p>
+                            </div>
+                            <input type="radio" />
+                          </div>
                         </div>
                       </div>
                     ))}

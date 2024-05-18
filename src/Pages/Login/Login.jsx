@@ -1,16 +1,17 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
-import { Assets } from "../../Components/Assets/Assets";
-import { FaAngleLeft } from "react-icons/fa6";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import {database} from "../../firebase"
-import { ref, onValue } from 'firebase/database'; 
+import { Link, useNavigate } from "react-router-dom";
+import { database } from "../../firebase";
+import { ref, onValue } from "firebase/database";
 import { firestore } from "../../firebase";
-import { getDocs, collection, query, where,getFirestore } from "firebase/firestore";
-
-
-
+import {
+  getDocs,
+  collection,
+  query,
+  where,
+  getFirestore,
+} from "firebase/firestore";
 
 export const Login = () => {
   const otpPage = useNavigate();
@@ -21,12 +22,9 @@ export const Login = () => {
   });
   const [numberValue, setNumberValue] = useState("");
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-   
-   
     setFormData({
       ...formData,
       [name]: value,
@@ -35,20 +33,17 @@ export const Login = () => {
 
   const [fixedOtpList, setFixedOtpList] = useState([]);
 
-  
-
   const fixedOtpChecking = () => {
-  
-    const fixedOtpRef = ref(database, 'FIXED_OTP');
+    const fixedOtpRef = ref(database, "FIXED_OTP");
 
-     // Create a reference to the 'FIXED_OTP' node
-    onValue(fixedOtpRef, (snapshot) => { 
+    // Create a reference to the 'FIXED_OTP' node
+    onValue(fixedOtpRef, (snapshot) => {
       // Attach a listener to the reference
       if (snapshot.exists()) {
         const data = snapshot.val();
         const otpList = Object.keys(data); // Extract the keys as the OTP list
         setFixedOtpList(otpList);
-        console.log(otpList); 
+        console.log(otpList);
       } else {
         console.log("dfjh"); // Handle the case where the snapshot does not exist
       }
@@ -58,7 +53,6 @@ export const Login = () => {
   useEffect(() => {
     fixedOtpChecking(); // Call the function to check for OTPs on component mount
   }, []);
-
 
   const getOtpApi = async () => {
     setShowLoading(true);
@@ -97,7 +91,7 @@ export const Login = () => {
     } catch (e) {
       console.log("catch======================");
       otpPage("/otp");
-      setShowLoading(false);  
+      setShowLoading(false);
       setError("Failed to send OTP. Please try again later.");
     }
   };
@@ -118,29 +112,26 @@ export const Login = () => {
 
     // const ref = collection(firestore, "user");
     if (mobileExists) {
-
-    if(fixedOtpList.includes(formData.mobile)){
-      otpPage("/otp",{ state: { mobile: formData.mobile } });
-    }else{
-      alert("Invalid Mobile Number")
+      if (fixedOtpList.includes(formData.mobile)) {
+        otpPage("/otp", { state: { mobile: formData.mobile } });
+      } else {
+        alert("Invalid Mobile Number");
+      }
+    } else {
+      alert("User Not Found");
     }
-  }else{
-    alert("User Not Found")
-  }
-
-
-   
   };
- 
 
   return (
     <div className="login">
-      <FaAngleLeft />
       <div className="img-box">
-        <img src={Assets.Boche} alt="" />
+        <h5>Login</h5>
+        <p>
+          Hey we’ve handpicked some items just for you. Tap to see your
+          personalized recommendations!
+        </p>
       </div>
       <div className="login-box">
-        <h5>Login</h5>
         <form onSubmit={handleLogin}>
           <input
             type="tel"
@@ -158,7 +149,9 @@ export const Login = () => {
           </button>
         </form>
         <p>Don’t You Have Account ?</p>
-        <button className="reg">Register</button>
+        <Link to="/register">
+          <button className="reg">Register</button>
+        </Link>
       </div>
     </div>
   );
