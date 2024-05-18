@@ -1,0 +1,65 @@
+.address-lists {
+    padding: 30px;
+}
+
+.address-itemm {
+    display: flex;
+    align-items: center;
+    border: 1px solid #474747;
+    padding: 10px;
+    border-radius: 21px;
+    margin-bottom: 20px;
+}
+
+.address-itemm input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.address-itemm .address-boxx {
+    padding: 16px 14px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.address-itemm .address-boxx:last-child {
+    margin-bottom: 0;
+}
+
+.address-itemm .address-boxx .edit-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.address-itemm .address-boxx .edit-top .location {
+    background-color: #346F32;
+    border-radius: 41px;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-itemm .address-boxx .edit-top .edit {
+    background-color: #F3F3F3;
+    border-radius: 36px;
+    outline: none;
+    border: none;
+    width: 56px;
+    height: 34px;
+}
+
+.address-itemm .address-boxx h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2B2129;
+}
+
+.address-itemm .address-boxx p {
+    font-size: 12px;
+    color: #474747;
+    font-weight: 400;
+}
