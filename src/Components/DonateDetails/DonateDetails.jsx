@@ -6,6 +6,7 @@ import fetchOrderCoupons from "./fetchOrderCoupons";
 
 export const DonateDetails = () => {
   const location = useLocation();
+  const navigator = useNavigate();
   const { orderId, orderDate, orderPrice, productQuantity, status,productImage,productPrice } = location.state || {  };
   const [coupons, setCoupons] = useState([]);
   console.log(productImage,'sdcjhsgjdchgsjcbhjsbc');
@@ -19,6 +20,11 @@ export const DonateDetails = () => {
 
     fetchData();
   }, [cusId, orderId]);
+
+
+  const handleNavigation = () => {
+    navigator("/home",{state:{'from':'coupen' }})
+  }
 
   return (
     <div className="donatedetails">
@@ -57,7 +63,7 @@ export const DonateDetails = () => {
       <div className="my-tickets">
         <div className="ticket-top">
           <h6>My Tickets</h6>
-          <button>See More</button>
+          <button onClick={ handleNavigation }>See More</button>
         </div>
         <ul style={{ padding: "0" }}>
         {coupons.map((coupon) => (
