@@ -34,17 +34,23 @@ export const Spotlight = () => {
           <p>Help</p>
         </div>
       </div>
-      <form action="" onSubmit={handleSave}>
-        <input type="text" placeholder="Enter coupon number" ref={messageRef} />
-        <button type="submit">Add</button>
-      </form>
-      <div className="wallet-show">
-        <Link to="/wallet" className="link">
-          <p>My Wallet</p>
-          <h6>₹ 15,000</h6>
-        </Link>
-        <div className="deposit">
-          <FaAngleRight />
+      <div className="spot-web">
+        <form action="" onSubmit={handleSave}>
+          <input
+            type="text"
+            placeholder="Enter coupon number"
+            ref={messageRef}
+          />
+          <button type="submit">Add</button>
+        </form>
+        <div className="wallet-show">
+          <Link to="/wallet" className="link">
+            <p>My Wallet</p>
+            <h6>₹ 15,000</h6>
+          </Link>
+          <div className="deposit">
+            <FaAngleRight />
+          </div>
         </div>
       </div>
     </div>

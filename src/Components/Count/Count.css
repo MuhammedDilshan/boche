@@ -1,5 +1,76 @@
-@media (max-width: 480px) {
+.count {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
 
+.count-box {
+    text-align: center;
+}
+
+.count-box .count-web {
+    margin-bottom: 20px;
+}
+
+.tea-number {
+    text-align: center;
+    position: relative;
+}
+
+.tea-number img.tea {
+    width: 200px;
+}
+
+.count-box .count-web h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #346F32;
+}
+
+.count-box .count-web h6 {
+    font-size: 12px;
+    color: #808080;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.couter {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.couter div {
+    background-color: #FFFFFF;
+    border-radius: 62px;
+    padding: 20px 44px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.couter div svg {
+    font-size: 18px;
+    color: #346F32;
+}
+
+.couter p {
+    font-size: 18px;
+    color: #346F32;
+}
+
+.round {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 240px;
+    z-index: -1;
+}
+
+@media (max-width: 480px) {
     .count {
         padding: 0 50px 50px 50px;
     }

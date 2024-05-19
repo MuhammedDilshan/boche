@@ -15,6 +15,11 @@ const AboutUs = () => {
         <ul>
           <li>
             <h6>Developed by</h6>
+            <p className="linkey">https://www.spinecodes.com</p>
+          </li>
+          <li>
+            <h6>Managed by</h6>
+            <p className="linkey">https://www.nuerobots.com</p>
           </li>
         </ul>
 
