@@ -182,10 +182,14 @@ const Splash = () => {
       console.log(user+"dfhgdfhvjfdgdsfvsdvsjdhvs")
       const phone = localStorage.getItem('loginUserPhone');
       console.log(phone+"dfhgdfhvjfdgdsfvsdvsjdhvs")
-      if(user === ""){
+      if(user === ""||user === null){
       if (productModelList.length > 1) {
         // Do something if there are more than one product
       } else {
+        localStorage.setItem('productId', productModelList[0].id);
+        localStorage.setItem('productName', productModelList[0].name);
+        localStorage.setItem('productImages', productModelList[0].images);
+        localStorage.setItem('productPrice', productModelList[0].price);
 
         navigator("/home",{state:{
           "productId":productModelList[0].id,

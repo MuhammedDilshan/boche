@@ -77,7 +77,7 @@ const PaymentChoose = () => {
     if(status === "SUCCESS"){
     await addOrders();
       history("/succes");
-      alert("Order Confirmed")
+      // alert("Order Confirmed")
     }else{
       alert("payment failed")
     }

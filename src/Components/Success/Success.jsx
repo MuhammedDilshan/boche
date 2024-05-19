@@ -10,11 +10,11 @@ const Success = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsSuccess(true);
-    }, 2500);
+      navigate("/home");
+    }, 4000);
 
     return () => clearTimeout(timeout);
-  }, [isSuccess]);
+  }, [navigate]);
 
   return (
     <div className="success">

@@ -79,7 +79,7 @@ const Otp = () => {
             // localStorage.setItem('phone_number', key);
             // Navigate to another page
             // otpPage("/some-page"); // Replace with actual navigation
-          } else {
+          } else if (key === targetKey && value !== pin) {
             alert("Invalid otp");
           }
         });
