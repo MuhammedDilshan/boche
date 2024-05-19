@@ -18,6 +18,7 @@ export const Home = () => {
     } = location.state || {};
 
     const loginUserId = localStorage.getItem('loginUserId');
+    console.log(loginUserId,"loggggggggggggs")
   
 
   // console.log(location.state?.productId)
@@ -38,7 +39,7 @@ export const Home = () => {
       <Social />
       <Button
         title="Buy Now"
-        page={loginUserId === "" ? "/login" : "/address"}
+        page={loginUserId === ""||loginUserId === null ? "/login" : "/address"}
       />
     </>
   );

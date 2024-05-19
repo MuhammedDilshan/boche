@@ -4,15 +4,15 @@ import "./Success.css";
 import Success_gif from "../Assets/gif/payment succesful png.gif";
 
 const Success = () => {
-  const navigate = useNavigate();
+  const navigator = useNavigate();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      navigate("/home");
+      navigator("/home",{state:{ 'from':'order'}});
     }, 4000);
 
     return () => clearTimeout(timeout);
-  }, [navigate]);
+  }, [navigator]);
 
   return (
     <div className="success">

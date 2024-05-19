@@ -3,8 +3,10 @@ import "./SelectPayment.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
+import { useCount } from "../../Context/Context";
 
 const SelectPayment = (selectedOption) => {
+  const { totalPrice, count } = useCount();
   console.log(selectedOption);
   const [selectPayment, setSelectPayment] = useState({
     deposit: {
@@ -48,7 +50,7 @@ const SelectPayment = (selectedOption) => {
   return (
     <div className="selectpayment">
       {/* <div className="my-wallet"> */}
-      <p>₹1500</p>
+      <p>₹{totalPrice}</p>
       {/* </div> */}
       <h4>Pay Using</h4>
       <div
