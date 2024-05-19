@@ -4,7 +4,7 @@ import { Assets } from "../Assets/Assets";
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { useCount } from "../../Context/Context";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Button } from "../Button/Button";
 
 export const Count = () => {
   const productPrice = localStorage.getItem("productPrice");
@@ -38,6 +38,7 @@ export const Count = () => {
             <FaPlus />
           </div>
         </div>
+        <Button title="But Now" />
       </div>
     </div>
   );
