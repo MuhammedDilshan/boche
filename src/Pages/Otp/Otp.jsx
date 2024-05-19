@@ -101,7 +101,7 @@ const Otp = () => {
 
   // const [productModelList, setProductModelList] = useState([]);
 
-  const productModelList = [];
+  let productModelList = [];
 
   const fetchMainProduct = async () => {
     try {
@@ -149,41 +149,41 @@ const Otp = () => {
     }
   };
 
+
   const userAuthorized = async () => {
     try {
+      productModelList = [];
       const userCollectionRef = collection(firestore, "CUSTOMERS");
-      const q = query(
-        userCollectionRef,
-        where("PHONE", "==", mobile),
-        where("STATUS", "==", "ACTIVE")
-      );
+      console.log("ddysuaiihgffdhsjakjshdfgdhxsjz")
+      const q = query(userCollectionRef, where("PHONE", "==", mobile),where("STATUS", "==", "ACTIVE"));
       const querySnapshot = await getDocs(q);
+      console.log("irsdhasf")
       // const querySnapshot = await collection("CUSTOMERS")
       //   .where("PHONE", "==", mobile)
       //   .where("STATUS", "==", "ACTIVE")
       //   .get();
-
+      
       if (!querySnapshot.empty) {
         const userData = querySnapshot.docs[0].data();
         const loginUser = {
           id: querySnapshot.docs[0].id,
-          name: userData["NAME"] || "",
-          phone: userData["PHONE"] || "",
-          place: userData["STATE"] || "",
-          type: userData["TYPE"] || "",
-          photo: userData["PROFILE_IMAGE"] || "",
+          name: userData["NAME"] || '',
+          phone: userData["PHONE"] || '',
+          place: userData["STATE"] || '',
+          type: userData["TYPE"] || '',
+          photo: userData["PROFILE_IMAGE"] || ''
         };
 
         setLoginUser(loginUser);
 
         // Store data in local storage
-        localStorage.setItem("appwrite_token", mobile);
-        localStorage.setItem("loginUserId", loginUser.id);
-        localStorage.setItem("loginUserName", loginUser.name);
-        localStorage.setItem("loginUserPhone", loginUser.phone);
-        localStorage.setItem("loginUserType", loginUser.type);
-        localStorage.setItem("loginUserPhoto", loginUser.photo);
-        localStorage.setItem("loginUserPlace", loginUser.place);
+        localStorage.setItem('appwrite_token', mobile);
+        localStorage.setItem('loginUserId', loginUser.id);
+        localStorage.setItem('loginUserName', loginUser.name);
+        localStorage.setItem('loginUserPhone', loginUser.phone);
+        localStorage.setItem('loginUserType', loginUser.type);
+        localStorage.setItem('loginUserPhoto', loginUser.photo);
+        localStorage.setItem('loginUserPlace', loginUser.place);
 
         console.log(loginUser);
         console.log("loginUser.............................");
@@ -192,74 +192,59 @@ const Otp = () => {
         // await fetchOrders(loginUser.id);
         // await fetchCoupons(loginUser.id);
         // await fetchWallet(loginUser.id);
-
+        
         // Check if product list has more than one product
         console.log(productModelList);
         console.log(productModelList[0].id);
         console.log(productModelList[0].name);
         console.log(productModelList[0].images);
+       
 
         console.log("productModelList...................");
-        setProductData({
-          productId: productModelList[0].id,
-          productName: productModelList[0].name,
-          productImages: productModelList[0].images,
-          productPrice: productModelList[0].price,
-          loginUserName: loginUser.name,
-          loginUserId: loginUser.id,
-          loginUserType: loginUser.type,
-          loginUserPhone: loginUser.phone,
-          loginUserPlace: loginUser.place,
-          loginUserPhoto: loginUser.photo,
-        });
+        // setProductData({
+        //   productId: productModelList[0].id,
+        //   productName: productModelList[0].name,
+        //   productImages: productModelList[0].images,
+        //   productPrice: productModelList[0].price,
+        //   loginUserName: loginUser.name,
+        //   loginUserId: loginUser.id,
+        //   loginUserType: loginUser.type,
+        //   loginUserPhone: loginUser.phone,
+        //   loginUserPlace: loginUser.place,
+        //   loginUserPhoto: loginUser.photo
+        // });
+        // console.log("irshadsssss")
 
-          if (productModelList.length > 1) {
-            // Do something if there are more than one product
-          } else {
-
-            // homePage("/home",{
-            //   productId: productModelList[0].id,productName:productModelList[0].name, productImages:productModelList[0].images,
-            //   productPrice:productModelList[0].price,loginUserName:loginUser.name,loginUserId:loginUser.id,loginUserType:loginUser.type,
-            //   loginUserPhone:loginUser.phone,loginUserPlace:loginUser.place,loginUserPhoto:loginUser.photo
-            // });
-            navigator("/home",{state:{
-              "productId":productModelList[0].id,
-              "productName":productModelList[0].name,
-              "productImages":productModelList[0].images,
-              "productPrice":productModelList[0].price,
-              "loginUserName":loginUser.name,
-              "loginUserId":loginUser.id,
-              "loginUserType":loginUser.type,
-              "loginUserPhone":loginUser.phone,
-              
-            }});
-             
-            // Redirect to another component
-            // callNextReplacement(
-            //   <BottomBar
-            //     productId={productModelList[0].id}
-            //     productName={productModelList[0].name}
-            //     productImages={productModelList[0].images}
-            //     productPrice={productModelList[0].price.toString()}
-            //     loginUserName={loginUser.name}
-            //     loginUserId={loginUser.id}
-            //     loginUserType={loginUser.type}
-            //     loginUserPhone={loginUser.phone}
-            //     loginUserPlace={loginUser.place}
-            //     loginUserPhoto={loginUser.photo}
-            //   />,
-            //   context
-            // );
-          }
+        if (productModelList.length > 1) {
+          // Do something if there are more than one product
         } else {
-          // Redirect to login screen if user not found
+          // console.log("irshadsssss")
+          localStorage.setItem('productId', productModelList[0].id);
+          localStorage.setItem('productName', productModelList[0].name);
+          localStorage.setItem('productImages', productModelList[0].images);
+          localStorage.setItem('productPrice', productModelList[0].price);
+
+          navigator("/home",{state:{
+            "productId":productModelList[0].id,
+            "productName":productModelList[0].name,
+            "productImages":productModelList[0].images,
+            "productPrice":productModelList[0].price,
+            "loginUserName":loginUser.name,
+            "loginUserId":loginUser.id,
+            "loginUserType":loginUser.type,
+            "loginUserPhone":loginUser.phone,  
+          }});
+           
         }
-      } catch (error) {
-        // Handle error
-        console.error('Sorry, some error occurred:', error);
-        // You might want to show a snackbar or toast here
+      } else {
+        // Redirect to login screen if user not found
       }
-    };
+    } catch (error) {
+      // Handle error
+      console.error('Sorry, some error occurred:', error);
+      // You might want to show a snackbar or toast here
+    }
+  };
 
    
 

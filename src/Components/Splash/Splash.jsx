@@ -147,6 +147,7 @@ const Splash = () => {
             localStorage.setItem('productName', productModelList[0].name);
             localStorage.setItem('productImages', productModelList[0].images);
             localStorage.setItem('productPrice', productModelList[0].price);
+            
 
             navigator("/home",{state:{
               "productId":productModelList[0].id,
@@ -156,8 +157,9 @@ const Splash = () => {
               "loginUserName":loginUser.name,
               "loginUserId":loginUser.id,
               "loginUserType":loginUser.type,
-              "loginUserPhone":loginUser.phone,  
-            }});
+              "loginUserPhone":loginUser.phone,
+              'from':'home'
+          }});
              
           }
         } else {

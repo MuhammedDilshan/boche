@@ -8,29 +8,30 @@ import Transactions from "../Transactions/Transactions";
 import { useLocation,useNavigate } from "react-router-dom";
 
 const BottomNavFixed = () => {
-  const [currentScreen, setCurrentScreen] = useState("home");
   const location = useLocation();
+  const [currentScreen, setCurrentScreen] = useState(location.state?.from);
   
-
-  console.log(location.state?.productId)
-  console.log(location.state?.productImages)
-  console.log(location.state?.productPrice)
+  console.log(location.state?.from)
+  // setCurrentScreen(from);
+  // console.log(location.state?.productId)
+  // console.log(location.state?.productImages)
+  // console.log(location.state?.productPrice)
   // console.log(navigator)
 
   const renderScreen = () => {
     switch (currentScreen) {
       case "home":
-        return <Home productImages={location.state?.productImages} productPrice={location.state?.productPrice} />;
+        return <Home/>;
       case "coupen":
-        return <Coupons />;
+        return <Coupons/>;
       case "order":
-        return <Orders />;
+        return <Orders/>;
       case "store":
-        return <Store />;
+        return <Store/>;
       case "transactions":
-        return <Transactions />;
+        return <Transactions/>;
       default:
-        return <Home productImages={location.state?.productImages} productPrice={location.state?.productPrice}/>;
+        return <Home/>;
     }
   };
   return (

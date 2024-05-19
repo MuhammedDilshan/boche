@@ -38,7 +38,7 @@ export const Home = () => {
       <Social />
       <Button
         title="Buy Now"
-        page={loginUserId === undefined ? "/login" : "/address"}
+        page={loginUserId === "" ? "/login" : "/address"}
       />
     </>
   );
