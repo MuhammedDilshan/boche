@@ -2,8 +2,32 @@
     height: 100vh;
     background-color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.congrats {
+    /* margin-bottom: 90px; */
+    position: absolute;
+    top: 130px;
+    opacity: 0;
+    animation: congrats 2s ease-in-out forwards;
+    animation-delay: .5s;
+}
+
+@keyframes congrats {
+    0% {
+        top: 130px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 80px;
+        opacity: 1;
+    }
+
 }
 
 .success .img-gif {
@@ -13,4 +37,163 @@
 .success .img-gif img {
     display: block;
     width: 100%;
+}
+
+.animation-container {
+    height: 300px;
+    width: 300px;
+}
+
+.animation-container .circle {
+    display: block;
+    width: 600px;
+    height: 600px;
+    background: #346f32;
+    position: fixed;
+    bottom: -50%;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: 1s ease;
+    animation: circle 2s ease-in-out forwards;
+}
+
+.animation-container .star-box {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) scale(0);
+    animation: star 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes circle {
+    0% {
+        bottom: -50%;
+        transform: translateX(-50%) scale(0);
+    }
+
+    100% {
+        left: 50%;
+        transform: translateX(-50%) scale(3);
+    }
+
+}
+
+@keyframes star {
+    0% {
+
+        transform: translate(50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(50%, -50%) scale(1);
+    }
+
+}
+
+.tickets {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    padding-left: 30px;
+    /* margin-left: 40px; */
+    opacity: 0;
+    animation: tickets 2s ease-in-out forwards;
+    animation-delay: 2s
+}
+
+.tickets img {
+    width: 350px;
+}
+
+@keyframes tickets {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+
+}
+
+
+
+.bottom-btn {
+    position: fixed;
+    bottom: 20px;
+    z-index: 55;
+    width: 90%;
+    background: yellow;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 16px;
+    animation: btn 1s ease-in-out forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+    .animation-container .circle {
+        height: 600px;
+    }
+
+    .animation-container .star-box {
+        top: 56%;
+    }
+
+    .tickets {
+        bottom: 300px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .animation-container .circle {
+        height: 600px;
+    }
+
+    .animation-container .star-box {
+        top: 56%;
+    }
+
+    .tickets {
+        bottom: 350px;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .animation-container .circle {
+        height: 540px;
+    }
+
+    .animation-container .star-box {
+        top: 56%;
+    }
+
+    .tickets {
+        bottom: 300px;
+
+    }
 }

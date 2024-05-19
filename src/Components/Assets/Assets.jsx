@@ -26,6 +26,9 @@ import activeOr from "./Images/active-order.svg";
 import activeSt from "./Images/active-store.svg";
 import Transac from "./Images/transaction.svg";
 import activeTr from "./Images/activeTra.svg";
+import Congrats from "./Images/congrats.svg";
+import Star_icon from "./Images/star-icon.svg";
+import ticket from "./Images/ticket.png";
 
 export const Assets = {
   Logo,
@@ -56,4 +59,7 @@ export const Assets = {
   activeSt,
   Transac,
   activeTr,
+  Congrats,
+  Star_icon,
+  ticket,
 };
