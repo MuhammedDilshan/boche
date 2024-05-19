@@ -93,3 +93,5 @@
     text-align: center;
     margin-top: 6px;
 }
+
+@media (max-width: 480px) {}
