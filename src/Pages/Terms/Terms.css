@@ -1,5 +1,7 @@
 .conditions {
-    padding: 20px;
+    padding: 20px 50px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .conditions .head {
@@ -31,5 +33,23 @@
     border: none;
     outline: none;
     display: block;
-    margin: 20px auto 0;
+    margin: 50px auto 0;
+}
+
+@media (max-width: 1000px) {
+    .conditions {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .conditions {
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .conditions {
+        width: 100%;
+    }
 }

@@ -1,5 +1,7 @@
 .contents {
-    padding: 20px;
+    padding: 50px 20px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .contents .head {
@@ -40,4 +42,22 @@
     outline: none;
     display: block;
     margin: 20px auto 0;
+}
+
+@media (max-width: 800px) {
+    .contents {
+        width: 80%;
+    }
+}
+
+@media (max-width: 640px) {
+    .contents {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contents {
+        padding: 20px;
+    }
 }

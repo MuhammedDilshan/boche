@@ -56,6 +56,7 @@ const MyDeposit = () => {
           </li>
         ))}
       </ul>
+      <button>Pay Now</button>
     </div>
   );
 };

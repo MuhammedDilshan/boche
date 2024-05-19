@@ -1,6 +1,6 @@
 import React from "react";
 import { TopNav } from "../../Components/TopNav/TopNav";
-import { Button } from "../../Components/Button/Button";
+// import { Button } from "../../Components/Button/Button";
 import MyDeposit from "../../Components/MyDeposit/MyDeposit";
 
 const Deposit = () => {
@@ -8,7 +8,7 @@ const Deposit = () => {
     <>
       <TopNav title="Deposit" />
       <MyDeposit />
-      <Button title="Pay Now" />
+      {/* <Button title="Pay Now" /> */}
     </>
   );
 };

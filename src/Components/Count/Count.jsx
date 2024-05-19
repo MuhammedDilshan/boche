@@ -38,7 +38,7 @@ export const Count = () => {
             <FaPlus />
           </div>
         </div>
-        <Button title="But Now" />
+        <button className="bbttn">Buy Now</button>
       </div>
     </div>
   );
