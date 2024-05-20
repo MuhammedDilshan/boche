@@ -98,3 +98,25 @@
     }
 
 }
+
+@media (max-width:740px) {
+    .location-list .district-location {
+        width: 70%;
+    }
+}
+
+@media (max-width:640px) {
+    .location-list .district-location {
+        width: 84%;
+    }
+}
+
+@media (max-width:480px) {
+    .location-list .district-location {
+        width: 100%;
+    }
+
+    .storelist form {
+        width: 100%;
+    }
+}
