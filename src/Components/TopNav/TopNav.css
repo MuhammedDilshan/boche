@@ -1,3 +1,27 @@
+.web-topnav {
+    height: 100px;
+    background-color: #346F32;
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.web-topnav .logo-nav {
+    width: 200px;
+}
+
+.web-topnav .logo-nav img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .web-topnav {
+        padding: 0 60px;
+    }
+}
+
 @media (max-width: 480px) {
     .topnav {
         height: 80px;

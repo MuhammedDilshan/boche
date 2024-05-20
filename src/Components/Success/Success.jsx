@@ -6,14 +6,22 @@ import { Assets } from "../Assets/Assets";
 
 const Success = () => {
   const navigator = useNavigate();
-  const [isSuccess, setIsSuccess] = useState();
+  const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      navigator("/home", { state: { from: "order" } });
-    }, 4000);
+    const successTimeout = setTimeout(() => {
+      setIsSuccess(true);
+    }, 3000);
 
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(successTimeout);
+  }, []); // The dependency array is empty to avoid infinite loop
+
+  useEffect(() => {
+    const navigateTimeout = setTimeout(() => {
+      navigator("/home", { state: { from: "order" } });
+    }, 10000);
+
+    return () => clearTimeout(navigateTimeout);
   }, [navigator]);
 
   return (

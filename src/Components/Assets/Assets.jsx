@@ -29,6 +29,7 @@ import activeTr from "./Images/activeTra.svg";
 import Congrats from "./Images/congrats.svg";
 import Star_icon from "./Images/star-icon.svg";
 import ticket from "./Images/ticket.png";
+import Boche_web from "./Images/bochefull.svg";
 
 export const Assets = {
   Logo,
@@ -62,4 +63,5 @@ export const Assets = {
   Congrats,
   Star_icon,
   ticket,
+  Boche_web,
 };

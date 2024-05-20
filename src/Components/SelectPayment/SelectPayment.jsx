@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 import { useCount } from "../../Context/Context";
+import { Button } from "../Button/Button";
 
 const SelectPayment = (selectedOption) => {
   const { totalPrice, count } = useCount();
@@ -153,6 +154,8 @@ const SelectPayment = (selectedOption) => {
           <FaArrowRightLong />
         </div>
       </Link>
+
+      <Button title="Place Order" />
     </div>
   );
 };

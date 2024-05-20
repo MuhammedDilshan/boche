@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BottomNav } from "../../Components/BottomNav/BottomNav";
 import { Home } from "../Home/Home";
 import Coupons from "../Coupons/Coupons";
 import Orders from "../Orders/Orders";
 import Store from "../Store/Store";
 import Transactions from "../Transactions/Transactions";
-import { useLocation,useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const BottomNavFixed = () => {
   const location = useLocation();
   const [currentScreen, setCurrentScreen] = useState(location.state?.from);
-  
-  console.log(location.state?.from)
+
+  console.log(location.state?.from);
   // setCurrentScreen(from);
   // console.log(location.state?.productId)
   // console.log(location.state?.productImages)
@@ -21,26 +21,40 @@ const BottomNavFixed = () => {
   const renderScreen = () => {
     switch (currentScreen) {
       case "home":
-        return <Home/>;
+        return <Home />;
       case "coupen":
-        return <Coupons/>;
+        return <Coupons />;
       case "order":
-        return <Orders/>;
+        return <Orders />;
       case "store":
-        return <Store/>;
+        return <Store />;
       case "transactions":
-        return <Transactions/>;
+        return <Transactions />;
       default:
-        return <Home/>;
+        return <Home />;
     }
   };
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       {renderScreen()}
-      <BottomNav
-        currentScreen={currentScreen}
-        setCurrentScreen={setCurrentScreen}
-      />
+      {isMobile && (
+        <BottomNav
+          currentScreen={currentScreen}
+          setCurrentScreen={setCurrentScreen}
+        />
+      )}
     </>
   );
 };

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./SelectAddress.css";
 import { Assets } from "../Assets/Assets";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { collection, getDoc, doc } from "firebase/firestore";
 import { firestore } from "../../firebase";
 import { Accordion, Card, Placeholder } from "react-bootstrap";
+import { Button } from "../Button/Button";
 
 const SelectAddress = () => {
   // const [addresses, setAddresses] = useState([]);
@@ -13,6 +14,7 @@ const SelectAddress = () => {
   const [lastUsedDeliveryAddress, setLastUsedDeliveryAddress] = useState("");
   const [selecteVariable, setselecteVariable] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
   // useEffect(() => {
   //   // const fetchAddresses = async () => {
@@ -148,6 +150,7 @@ const SelectAddress = () => {
           </Accordion>
         </div>
       </div>
+      <Button title="Submit" page="/payment" />
     </div>
   );
 };
