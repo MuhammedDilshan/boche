@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Privacy.css";
 import { TopNav } from "../../Components/TopNav/TopNav";
+import TopnavWeb from "../../Components/TopNav/TopnavWeb";
 
 export const Privacy = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
-      <TopNav title="Privacy Policy" />
+      {isMobile ? <TopNav title="Privacy Policy" /> : <TopnavWeb />}
       <div className="contents">
         <div className="head">
           <h6>Privacy Policy</h6>

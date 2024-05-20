@@ -1,5 +1,7 @@
 .withdrawdetails {
     padding: 40px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .withdrawdetails .balance {
@@ -61,6 +63,7 @@
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 100px;
+    padding: 0;
 }
 
 .withdrawdetails .amounts li {
@@ -83,6 +86,7 @@
     background-color: #F2F2F2;
     border-radius: 16px;
     padding: 16px 10px;
+    margin-bottom: 30px;
 }
 
 .withdrw-bank h4 {
@@ -133,4 +137,22 @@
     outline: 0;
     border-radius: 31px;
     width: 100%;
+}
+
+@media (max-width:1000px) {
+    .withdrawdetails {
+        width: 70%;
+    }
+}
+
+@media (max-width:800px) {
+    .withdrawdetails {
+        width: 80%;
+    }
+}
+
+@media (max-width:640px) {
+    .withdrawdetails {
+        width: 100%;
+    }
 }

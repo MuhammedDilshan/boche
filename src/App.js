@@ -32,6 +32,7 @@ import { Privacy } from "./Pages/Privacy/Privacy";
 import { Terms } from "./Pages/Terms/Terms";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import ChangeAddress from "./Components/ChangeAddress/ChangeAddress";
+import Failed from "./Components/Failed/Failed";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/change" element={<ChangeAddress />} />
+              <Route path="/failed" element={<Failed />} />
             </Routes>
           </Router>
         </ProductProvider>

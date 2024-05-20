@@ -1,5 +1,7 @@
 .my-order {
     padding: 20px;
+    width: 70%;
+    margin: 50px auto 0;
 }
 
 .my-order form {
@@ -70,4 +72,22 @@
 .order-list .details {
     color: #434343;
     text-decoration: none;
+}
+
+@media (max-width:1000px) {
+    .my-order {
+        width: 80%;
+    }
+}
+
+@media (max-width:800px) {
+    .my-order {
+        width: 90%;
+    }
+}
+
+@media (max-width:640px) {
+    .my-order {
+        width: 100%;
+    }
 }

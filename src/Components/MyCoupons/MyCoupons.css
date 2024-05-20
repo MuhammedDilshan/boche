@@ -1,5 +1,14 @@
 .mycoupons {
     padding: 30px 30px 70px 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mycoupons .coupen-webap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .mycoupons .my-earnings {
@@ -9,6 +18,7 @@
     padding: 12px;
     border: 0.3px solid #346F32;
     align-items: center;
+    width: 42%;
 }
 
 .mycoupons .my-earnings .left-cont {
@@ -50,10 +60,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
     background-color: #F2F2F2;
     border-radius: 21px;
     padding: 0 0 0 20px;
+    width: 42%;
 }
 
 .mycoupons .scan input {
@@ -98,10 +108,86 @@
 }
 
 .mycoupons .mytick li {
-    margin-bottom: 20px;
+    position: relative;
+    width: 70%;
+    margin: 30px auto 0;
 }
 
-.mycoupons .mytick li img {
+.mycoupons .mytick li .ticket-won {
+    width: 100%;
+    margin: 0 auto 30px;
+}
+
+.mycoupons .mytick li .ticket-won img {
     display: block;
     width: 100%;
+}
+
+.mycoupons .mytick li img.won {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+}
+
+@media (max-width:1000px) {
+    .mycoupons {
+        width: 100%;
+    }
+
+    .mycoupons .mytick li img.won {
+        width: 150px;
+    }
+}
+
+@media (max-width:800px) {
+    .mycoupons .coupen-webap {
+        display: block;
+    }
+
+    .mycoupons .my-earnings {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .mycoupons .scan {
+        width: 70%;
+        margin: 30px auto 0;
+    }
+
+    .mycoupons .mytick li img.won {
+        width: 120px;
+    }
+}
+
+@media (max-width:640px) {
+    .mycoupons .my-earnings {
+        width: 90%;
+    }
+
+    .mycoupons .scan {
+        width: 90%;
+    }
+
+    .mycoupons .mytick li {
+        width: 90%;
+    }
+}
+
+@media (max-width:480px) {
+    .mycoupons .my-earnings {
+        width: 100%;
+    }
+
+    .mycoupons .scan {
+        width: 100%;
+    }
+
+    .mycoupons .mytick li {
+        width: 100%;
+    }
+
+    .mycoupons .mytick li img.won {
+        width: 100px;
+    }
 }

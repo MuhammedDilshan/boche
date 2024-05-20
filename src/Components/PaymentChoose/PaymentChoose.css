@@ -23,8 +23,8 @@
 }
 
 .payment-choose .option-box {
-    border-radius: 48px 48px 0 0;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* border-radius: 48px 48px 0 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
     padding: 20px;
 }
 
@@ -93,7 +93,28 @@
     margin-bottom: 130px;
 }
 
+@media (max-width:1000px) {
+    .payment-choose {
+        width: 60%;
+    }
+}
+
+@media (max-width:800px) {
+    .payment-choose {
+        width: 70%;
+    }
+}
+
+@media (max-width:640px) {
+    .payment-choose {
+        width: 80%;
+    }
+}
+
 @media (max-width:480px) {
+    .payment-choose {
+        width: 100%;
+    }
 
     .payment-choose .count-box {
         text-align: center;

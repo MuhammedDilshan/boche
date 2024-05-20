@@ -1,5 +1,7 @@
 .donatedetails {
     padding: 30px 30px 70px 30px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .donate-detail-box {
@@ -96,4 +98,16 @@
 .my-tickets ul li img {
     width: 100%;
     display: block;
+}
+
+@media (max-width:1000px) {
+    .donatedetails {
+        width: 80%;
+    }
+}
+
+@media (max-width:640px) {
+    .donatedetails {
+        width: 100%;
+    }
 }

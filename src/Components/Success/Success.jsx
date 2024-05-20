@@ -18,7 +18,7 @@ const Success = () => {
 
   useEffect(() => {
     const navigateTimeout = setTimeout(() => {
-      navigator("/home", { state: { from: "order" } });
+      //   navigator("/home", { state: { from: "order" } });
     }, 10000);
 
     return () => clearTimeout(navigateTimeout);

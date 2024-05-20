@@ -1,5 +1,6 @@
 import React from "react";
 import "./MyWallet.css";
+import { Button } from "../Button/Button";
 
 export const MyWallet = () => {
   return (
@@ -45,6 +46,7 @@ export const MyWallet = () => {
           </div>
         </div>
       </div>
+      <Button title="Withdraw Now" />
     </div>
   );
 };

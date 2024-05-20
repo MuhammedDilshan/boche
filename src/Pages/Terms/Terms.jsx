@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Terms.css";
 import { TopNav } from "../../Components/TopNav/TopNav";
+import TopnavWeb from "../../Components/TopNav/TopnavWeb";
 
 export const Terms = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
-      <TopNav title="Terms and Conditions" />
+      {isMobile ? <TopNav title="Terms and Conditions" /> : <TopnavWeb />}
       <div className="conditions">
         <div className="head">
           <h6>Terms and Coditions</h6>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./WithdrawDetails.css";
 import AccoutDetails from "../../Components/AccoutDetails/AccoutDetails";
+import { Button } from "../Button/Button";
 
 const WithdrawDetails = () => {
   const [showNewAddressForm, setShowNewAddressForm] = useState(false);
@@ -55,6 +56,7 @@ const WithdrawDetails = () => {
         <button onClick={handleButtonClick}>Add New Address</button>
         {showNewAddressForm && <AccoutDetails />}
       </div>
+      <Button title="Redeem Now" />
     </div>
   );
 };

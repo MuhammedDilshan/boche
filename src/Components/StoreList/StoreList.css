@@ -9,7 +9,8 @@
     background-color: #F8F8F8;
     border-radius: 30px;
     padding: 10px;
-    margin-bottom: 18px;
+    width: 50%;
+    margin: 0 auto 20px;
 }
 
 .storelist form input {
@@ -47,6 +48,14 @@
 
 .location-list {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.location-list .district-location {
+    width: 45%;
 }
 
 .location-list .location {
@@ -81,4 +90,11 @@
     font-weight: 400;
     color: #2B2129;
     width: 80%;
+}
+
+@media (max-width:800px) {
+    .storelist form {
+        width: 70%;
+    }
+
 }
