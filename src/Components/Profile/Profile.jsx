@@ -10,10 +10,10 @@ const Profile = () => {
     document.body.classList.remove("modal-active", "overflow-hidden");
   };
 
-  const loginUserPhone = localStorage.getItem('loginUserPhone');
-  const loginUserName = localStorage.getItem('loginUserName');
-  const loginUserPhoto = localStorage.getItem('loginUserPhoto');
-  const loginUserPlace = localStorage.getItem('loginUserPlace');
+  const loginUserPhone = localStorage.getItem("loginUserPhone");
+  const loginUserName = localStorage.getItem("loginUserName");
+  const loginUserPhoto = localStorage.getItem("loginUserPhoto");
+  const loginUserPlace = localStorage.getItem("loginUserPlace");
 
   const handleClearLocalStorage = () => {
     localStorage.clear();
@@ -31,14 +31,23 @@ const Profile = () => {
       <div className="bottom">
         <div className="profile-details">
           <div className="user-image">
-            <img src={loginUserPhoto === ""||loginUserPhoto === undefined ?Yakob:loginUserPhoto} alt="" />
+            <img
+              src={
+                loginUserPhoto === "" || loginUserPhoto === undefined
+                  ? Yakob
+                  : loginUserPhoto
+              }
+              alt=""
+            />
           </div>
           <h5>{loginUserName}</h5>
           <p>{loginUserPhone}</p>
           <p>{loginUserPlace}</p>
         </div>
         <div className="btns">
-          <button onClick={handleClearLocalStorage} className="out">Log out</button>
+          <button onClick={handleClearLocalStorage} className="out">
+            Log out
+          </button>
           <button className="edit">Edit</button>
         </div>
       </div>

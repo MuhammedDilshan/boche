@@ -1,0 +1,102 @@
+.logout-box {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 50%;
+}
+
+.logout-box h6 {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.logout-box p {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 14px !important;
+}
+
+.logout-box .cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.logout-box .cancel-btn .cancel {
+    background-color: #346F32;
+    color: #FFFFFF;
+    border-radius: 34px;
+    font-size: 10px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    padding: 11;
+    width: 116px;
+    height: 36px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+.logout-box .cancel-btn .ok {
+    background-color: #FFFFFF;
+    color: #346F32;
+    border-radius: 34px;
+    font-size: 10px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    padding: 11;
+    width: 116px;
+    height: 36px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+/* Support */
+
+.support .logout-box {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 50%;
+}
+
+.support .logout-box h6 {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.support .logout-box p {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 14px !important;
+}
+
+.support .logout-box .cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.support .calb {
+    background-color: #FFFFFF;
+    color: #346F32;
+    border-radius: 34px;
+    font-size: 10px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    padding: 11;
+    width: 116px;
+    height: 36px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

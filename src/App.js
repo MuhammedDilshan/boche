@@ -33,6 +33,10 @@ import { Terms } from "./Pages/Terms/Terms";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import ChangeAddress from "./Components/ChangeAddress/ChangeAddress";
 import Failed from "./Components/Failed/Failed";
+import ProfileEdit from "./Components/ProfileEdit/ProfileEdit";
+import Logout from "./Components/Alert/Logout";
+import Exit from "./Components/Alert/Exit";
+import Support from "./Components/Alert/Support";
 
 function App() {
   return (
@@ -68,6 +72,8 @@ function App() {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/change" element={<ChangeAddress />} />
               <Route path="/failed" element={<Failed />} />
+              <Route path="/edit" element={<ProfileEdit />} />
+              <Route path="/logout" element={<Support />} />
             </Routes>
           </Router>
         </ProductProvider>

@@ -34,11 +34,11 @@ const BottomNavFixed = () => {
         return <Home />;
     }
   };
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 870);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
+      setIsMobile(window.innerWidth <= 870);
     };
 
     window.addEventListener("resize", handleResize);

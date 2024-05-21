@@ -54,6 +54,24 @@ const MyCoupons = () => {
           <img src={Ticker} alt="" />
         </li> */}
       </ul>
+      <div className="expire">
+        <div className="white">
+          <div className="ticket-expired">
+            <img src={Ticker} alt="" />
+          </div>
+          <div className="exp">
+            <p>Expired</p>
+          </div>
+        </div>
+        <div className="white">
+          <div className="ticket-expired">
+            <img src={Ticker} alt="" />
+          </div>
+          <div className="exp">
+            <p>Expired</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

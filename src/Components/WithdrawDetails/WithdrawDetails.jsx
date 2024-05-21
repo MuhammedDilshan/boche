@@ -5,10 +5,40 @@ import { Button } from "../Button/Button";
 
 const WithdrawDetails = () => {
   const [showNewAddressForm, setShowNewAddressForm] = useState(false);
+  const [amount, setAmount] = useState();
 
   const handleButtonClick = () => {
     setShowNewAddressForm(true);
   };
+  const priceHandler = (amount) => {
+    setAmount(amount);
+  };
+  const price = [
+    {
+      id: 1,
+      price: 50,
+    },
+    {
+      id: 2,
+      price: 100,
+    },
+    {
+      id: 3,
+      price: 200,
+    },
+    {
+      id: 5,
+      price: 300,
+    },
+    {
+      id: 6,
+      price: 400,
+    },
+    {
+      id: 9,
+      price: 500,
+    },
+  ];
   return (
     <div className="withdrawdetails">
       <div className="balance">
@@ -16,28 +46,21 @@ const WithdrawDetails = () => {
         <h6>₹ 1,500</h6>
       </div>
       <form action="">
-        <input type="text" placeholder="Enter Amount" className="enter" />
+        <input
+          type="text"
+          placeholder="Enter Amount"
+          className={amount ? `active enter` : "enter"}
+          value={amount}
+          onChange={(e) => priceHandler(Number(e.target.value))}
+        />
       </form>
       <p>Enter amount to deposit to your account</p>
       <ul className="amounts">
-        <li>
-          <p>₹50</p>
-        </li>
-        <li>
-          <p>₹100</p>
-        </li>
-        <li>
-          <p>₹200</p>
-        </li>
-        <li>
-          <p>₹500</p>
-        </li>
-        <li>
-          <p>₹1000</p>
-        </li>
-        <li>
-          <p>₹5000</p>
-        </li>
+        {price?.map(({ price }, i) => (
+          <li key={i}>
+            <p onClick={() => priceHandler(price)}>₹{price}</p>
+          </li>
+        ))}
       </ul>
       <div className="withdrw-bank">
         <h4>Withdraw to</h4>

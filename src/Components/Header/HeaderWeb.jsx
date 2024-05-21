@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Assets } from "../Assets/Assets";
 import { Link } from "react-router-dom";
+import Profile from "../Profile/Profile";
 
 const HeaderWeb = () => {
   const [currentScreen, setCurrentScreen] = useState("");
@@ -9,12 +10,15 @@ const HeaderWeb = () => {
   const handleNavClick = (screen) => {
     setCurrentScreen(screen);
   };
+  const handleUserImgClick = () => {
+    document.body.classList.add("modal-active", "overflow-hidden");
+  };
 
   return (
     <div>
       <header className="head-web">
         <div className="web-logo">
-          <img src={Assets.Boche_web} alt="" />
+          <img src={Assets.Boche_web} alt="Logo" />
         </div>
         <ul className="nav">
           <li>
@@ -64,10 +68,11 @@ const HeaderWeb = () => {
               Transactions
             </Link>
           </li>
-          <div className="user-web">
-            <img src={Assets.User} alt="" />
+          <div className="user-web" onClick={handleUserImgClick}>
+            <img src={Assets.User} alt="User" />
           </div>
         </ul>
+        <Profile />
       </header>
     </div>
   );

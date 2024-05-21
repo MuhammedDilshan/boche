@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { TopNav } from "../../Components/TopNav/TopNav";
 import StoreList from "../../Components/StoreList/StoreList";
-import TopnavWeb from "../../Components/TopNav/TopnavWeb";
 // import { BottomNav } from "../../Components/BottomNav/BottomNav";
+import HeaderWeb from "../../Components/Header/HeaderWeb";
 
 const Store = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 870);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
+      setIsMobile(window.innerWidth <= 870);
     };
 
     window.addEventListener("resize", handleResize);
@@ -19,7 +19,7 @@ const Store = () => {
 
   return (
     <>
-      {isMobile ? <TopNav title="Store List" /> : <TopnavWeb />}
+      {isMobile ? <TopNav title="Store List" /> : <HeaderWeb />}
       <StoreList />
       {/* <BottomNav /> */}
     </>

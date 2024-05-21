@@ -1,20 +1,18 @@
 .profile {
     padding-bottom: 50px;
     top: 0;
-    width: 100%;
+    right: 0;
+    width: 60%;
     position: relative;
     z-index: 44 !important;
     visibility: hidden;
     opacity: 0;
     transition: .3s ease-in-out;
-
     position: fixed;
-    top: 0;
-
 }
 
 .modal-active .profile {
-    top: 0;
+    top: 100px;
     opacity: 1;
     visibility: visible;
 }
@@ -115,11 +113,142 @@
     background-color: #00000085;
     position: absolute;
     z-index: -1;
-
     transition: .3s ease-in-out;
 }
 
 .modal-active .overlay {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width:900px) {
+    .modal-active .profile {
+        top: 80px;
+    }
+}
+
+@media (max-width:480px) {
+    .profile {
+        padding-bottom: 50px;
+        top: 0;
+        width: 100%;
+        position: relative;
+        z-index: 44 !important;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease-in-out;
+        position: fixed;
+        top: 0;
+
+    }
+
+    .modal-active .profile {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .profile .profile-box {
+        background-color: #346F32;
+        height: 170px;
+        padding: 50px;
+    }
+
+    .profile .profile-box h6 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+    }
+
+    .profile .profile-box svg {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .profile .profile-details {
+        text-align: center;
+        margin-top: -50px;
+    }
+
+    .profile .profile-details .user-image {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .profile .profile-details .user-image img {
+        display: block;
+        width: 100%;
+        border-radius: 32px;
+        border: 1px solid #E9FFE8;
+    }
+
+    .profile .profile-details h5 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #3f3f3f;
+        margin: 10px 0;
+    }
+
+    .profile .profile-details p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #3F3F3F;
+        margin-bottom: 10px;
+    }
+
+    .profile .btns {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .profile .btns .out {
+        background-color: #FFFFFF;
+        border-radius: 45px;
+        color: #346F32;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline: none;
+        border: none;
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 110px;
+    }
+
+    .profile .btns .edit {
+        background-color: #346F32;
+        border-radius: 45px;
+        color: #fff;
+        outline: none;
+        border: none;
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 110px;
+    }
+
+    .bottom {
+        background-color: #fff;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .overlay {
+        width: 100%;
+        display: block;
+        height: 100vh;
+        top: 0;
+        background-color: #00000085;
+        position: absolute;
+        z-index: -1;
+        transition: .3s ease-in-out;
+    }
+
+    .modal-active .overlay {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
 }

@@ -33,6 +33,7 @@
     color: #FFEE01;
 }
 
+
 @media (max-width: 1280px) {
     .head-web {
         padding: 0 50px;
@@ -51,7 +52,7 @@
 
 /* web-end */
 
-@media (max-width: 480px) {
+@media (max-width: 870px) {
     header {
         background: #346F32;
         height: 80px;

@@ -13,11 +13,11 @@ import HeaderWeb from "../../Components/Header/HeaderWeb";
 export const Home = () => {
   const location = useLocation();
   const { productImages, productPrice } = location.state || {};
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 870);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
+      setIsMobile(window.innerWidth <= 870);
     };
 
     window.addEventListener("resize", handleResize);

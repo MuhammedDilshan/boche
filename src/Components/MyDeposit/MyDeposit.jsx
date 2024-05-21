@@ -46,6 +46,7 @@ const MyDeposit = () => {
           placeholder="Enter Amount"
           className={amount ? `active enter` : "enter"}
           value={amount}
+          onChange={(e) => priceHandler(Number(e.target.value))}
         />
       </form>
       <p>Enter amount to deposit to your account</p>
