@@ -6,6 +6,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.success ::-webkit-scrollbar {
+    display: none;
 }
 
 .congrats {
@@ -48,6 +56,7 @@
     display: block;
     width: 600px;
     height: 600px;
+
     background: #346f32;
     position: fixed;
     bottom: -50%;
@@ -152,48 +161,64 @@
 
 }
 
-
-@media (max-width: 560px) {
+@media (max-width:1555px) {
     .animation-container .circle {
-        height: 600px;
-    }
-
-    .animation-container .star-box {
-        top: 56%;
+        width: 500px;
+        height: 500px;
+        bottom: -60%;
     }
 
     .tickets {
-        bottom: 300px;
+        bottom: 200px;
+        right: -75%;
+        width: 100%;
+        transform: translateX(-50%) !important;
+    }
 
+    .bottom-btn {
+        width: 400px;
+    }
+
+    .animation-container .star-box {
+        bottom: 200px;
+    }
+
+
+}
+
+@media (max-width: 660px) {
+    .success {
+        width: 100%;
+    }
+
+    .tickets {
+        right: -50%;
     }
 }
 
-@media (max-width: 480px) {
-    .animation-container .circle {
-        height: 600px;
-    }
+.win {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    opacity: 0;
+    animation: win 1s ease-in-out forwards;
+    animation-delay: 5s;
 
-    .animation-container .star-box {
-        top: 56%;
-    }
-
-    .tickets {
-        bottom: 350px;
-
-    }
 }
 
-@media (max-width: 400px) {
-    .animation-container .circle {
-        height: 540px;
+.win h3 {
+    font-size: 20px;
+}
+
+
+@keyframes win {
+    0% {
+        opacity: 0;
     }
 
-    .animation-container .star-box {
-        top: 56%;
-    }
-
-    .tickets {
-        bottom: 300px;
-
+    100% {
+        opacity: 1;
     }
 }
